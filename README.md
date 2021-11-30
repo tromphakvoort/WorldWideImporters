@@ -1,6 +1,6 @@
 # World Wide Importers
 
-PHP webshop for World Wide Importers 
+PHP webshop for World Wide Importers assigned by Windesheim Dutch university of applied sciences.
 
 ## License
 
