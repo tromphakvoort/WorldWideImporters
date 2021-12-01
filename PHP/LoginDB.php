@@ -5,20 +5,20 @@
 
 <?php
 if(isset($_POST["Login"])){
-    $Gebruiker = mysql_real_escape_string($_POST["Gebruiker"]);
+    $Email = mysql_real_escape_string($_POST["Email"]);
     $Wachtwoord = mysql_real_escape_string($_POST["Wachtwoord"]);
-    if(empty($Gebruiker) && empty($Wachtwoord)){
+    if(empty($Email) && empty($Wachtwoord)){
         FoutSessie("Alle velden moeten ingevuld zijn", true);
     }else{
-        if(GebruikerActief()){
-            $GevondenAccount = LoginPoging($Gebruiker, $Wachtwoord);
+        if(EmailActief()){
+            $GevondenAccount = LoginPoging($Email, $Wachtwoord);
             if($GevondenAccount){
                 Redirect_To("Index.php");
             }else{
-                FoutSessie("Gebruikersnaam of Wachtwoord klopt niet", true);
+                FoutSessie("Email of Wachtwoord klopt niet", true);
             }
         }else{
-            FoutSessie("Gebruiker moet geactiveerd worden", true);
+            FoutSessie("Account moet geactiveerd worden", true);
         }
     }
 }
