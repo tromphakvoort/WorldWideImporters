@@ -3,30 +3,31 @@
 <?php require_once("PHP/Functies.php"); ?>
 <?php require_once("PHP/DB.php"); ?>
 <?php
-if(isset($_POST["Registreren"])){
+if (isset($_POST["Registreren"])) {
     $Email = mysql_real_escape_string($_POST["Email"]);
     $HerEmail = mysql_real_escape_string($_POST["Her-Email"]);
     $Wachtwoord = mysql_real_escape_string($_POST["Wachtwoord"]);
     $HerWachtwoord = mysql_real_escape_string($_POST["Her-Wachtwoord"]);
     $Token = bin2hex(openssl_random_pseudo_bytes(40));
 
-    if(empty($Email) && empty($HerEmail) && empty($Wachtwoord) && empty($HerWachtwoord)) {
+    // Validate data
+    if (empty($Email) && empty($HerEmail) && empty($Wachtwoord) && empty($HerWachtwoord)) {
         FoutSessie("Alle velden moeten ingevuld zijn", false);
-    }elseif($Email!==$HerEmail) {
+    } elseif ($Email !== $HerEmail) {
         FoutSessie("Emails komen niet overeen", false);
-    }elseif($Wachtwoord!==$HerWachtwoord) {
+    } elseif ($Wachtwoord !== $HerWachtwoord) {
         FoutSessie("Wachtwoorden komen niet overeen", false);
-    }elseif(strlen($Wachtwoord)<8){
+    } elseif (strlen($Wachtwoord) < 8) {
         FoutSessie("Wachtwoord moet minimaal 8 waarden bevatten", false);
-    }elseif(CheckEmail($Email)){
+    } elseif (CheckEmail($Email)) {
         FoutSessie("Email word al gebruikt", false);
-    }else{
+    } else {
         global $ConnectieDB;
         $Query = "INSERT INTO users(email,wachtwoord,token,actief)VALUES('$Email', '$Wachtwoord', '$Token', 'OFF')";
         $Uitvoeren = mysql_query($Query);
-        if($Uitvoeren){
+        if ($Uitvoeren) {
             EmailVersturen();
-        }else{
+        } else {
             return null;
         }
     }
