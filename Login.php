@@ -13,8 +13,8 @@
             </div>
             <form action="Login.php" method="post">
                 <fieldset>
-                    <p>Gebruikersnaam:</p><br>
-                    <input type="text" Name="Gebruiker" value=""><br>
+                    <p>Email:</p><br>
+                    <input type="text" Name="Email" value=""><br>
 
                     <p>Wachtwoord:</p><br>
                     <input type="password" Name="Wachtwoord" value=""><br>

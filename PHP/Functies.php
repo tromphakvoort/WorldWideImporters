@@ -45,21 +45,9 @@ function CheckEmail($Email)
     }
 }
 
-function CheckGebruiker($Gebruiker)
+function LoginPoging($Email, $Wachtwoord)
 {
-    global $ConnectieDB;
-    $Query = "SELECT * FROM users WHERE gebruikersnaam='$Gebruiker'";
-    $Uitvoeren = mysql_query($Query);
-    if(mysql_num_rows($Execute)>0){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-function LoginPoging($Gebruiker, $Wachtwoord)
-{
-    $Query = "SELECT * FROM users WHERE gebruikersnaam='$Gebruiker'";
+    $Query = "SELECT * FROM users WHERE email='$Email'";
     $Uitvoeren = mysql_query($Query);
     if($Admin = mysql_fetch_assoc($Uitvoeren)>0){
         return true;
@@ -67,7 +55,7 @@ function LoginPoging($Gebruiker, $Wachtwoord)
         return false;
     }
 }
-function GebruikerActief()
+function AccountActief()
 {
     global $ConnectieDB;
     $Query = "SELECT * FROM users WHERE actief='On'";
@@ -82,11 +70,11 @@ function EmailVersturen()
 {
     global $ConnectieDB;
     $HashedWachtwoord = WachtwoordEncrypt($Wachtwoord);
-    $Query = "INSERT INTO users(gebruikers,email,wachtwoord,token,actief)VALUES('$Gebruiker','$Email','$HashedWachtwoord','$Token','OFF')";
+    $Query = "INSERT INTO users(email,wachtwoord,token,actief)VALUES('$Email','$HashedWachtwoord','$Token','OFF')";
     $Uitvoeren = mysql_query($Query);
     if($Uitvoeren){
         $Onderwerp = "Activeer account";
-        $Body = 'Hi' .$Gebruiker. ', Hier is u activatie link http://localhost/Registreren/Actieveren.php?token='.$Token;
+        $Body = 'Hi, Hier is u activatie link http://localhost/Registreren/Actieveren.php?token='.$Token;
         $ZenderEmail = "no-reply@WWI.nl";
         if(mail($Email, $Onderwerp, $Body, $ZenderEmail)){
             Sessie("Controleer u email voor activatie", true);
