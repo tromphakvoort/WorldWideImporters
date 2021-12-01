@@ -5,3 +5,5 @@ PHP webshop for World Wide Importers assigned by Windesheim Dutch university of 
 ## License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (Educational Community License v2.0).
+
+Bijgewerkt 20:30 1-12-2021
