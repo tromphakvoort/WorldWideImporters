@@ -12,7 +12,7 @@
                 <?php echo FoutBericht(); ?>
                 <?php echo Bericht(); ?>
             </div>
-            <form action="Registreren.php" method="post">
+            <form action="register.php" method="post">
                 <fieldset>
                     <p>Email:</p><br>
                     <input type="text" Name="Email" value=""><br>

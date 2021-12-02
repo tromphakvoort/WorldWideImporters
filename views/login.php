@@ -11,7 +11,7 @@
                 <?php echo FoutBericht(); ?>
                 <?php echo Bericht(); ?>
             </div>
-            <form action="Login.php" method="post">
+            <form action="login.php" method="post">
                 <fieldset>
                     <p>Email:</p><br>
                     <input type="text" Name="Email" value=""><br>
