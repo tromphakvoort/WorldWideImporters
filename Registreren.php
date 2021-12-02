@@ -1,4 +1,4 @@
-<?php require_once("PHP/RegistrerenDB.php"); ?>
+<?php require_once("PHP/RegisterDB.php"); ?>
 
 <!DOCTYPE>
 <html>
@@ -8,9 +8,9 @@
 
     <body>
         <div id="Registreren">
-            <div id="Bericht">
-                <?php echo FoutBericht(); ?>
-                <?php echo Bericht(); ?>
+            <div id="Message">
+                <?php echo ErrorMessage(); ?>
+                <?php echo Message(); ?>
             </div>
             <form action="Registreren.php" method="post">
                 <fieldset>
@@ -20,11 +20,11 @@
                     <p>Herhaal email:</p><br>
                     <input type="text" Name="Her-Email" value=""><br>
 
-                    <p>Wachtwoord:</p><br>
-                    <input type="password" Name="Wachtwoord" value=""><br>
+                    <p>Password:</p><br>
+                    <input type="password" Name="Password" value=""><br>
 
-                    <p>Herhaal wachtwoord:</p><br>
-                    <input type="password" Name="Her-Wachtwoord" value=""><br>
+                    <p>Herhaal Password:</p><br>
+                    <input type="password" Name="Her-Password" value=""><br>
 
                     <input type="Submit" name="Submit" value="Registreren"><br>
                 </fieldset>

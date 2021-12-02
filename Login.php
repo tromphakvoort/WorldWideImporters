@@ -7,17 +7,17 @@
 
     <body>
         <div id="Login">
-            <div id="Bericht">
-                <?php echo FoutBericht(); ?>
-                <?php echo Bericht(); ?>
+            <div id="Message">
+                <?php echo ErrorMessage(); ?>
+                <?php echo Message(); ?>
             </div>
             <form action="Login.php" method="post">
                 <fieldset>
                     <p>Email:</p><br>
                     <input type="text" Name="Email" value=""><br>
 
-                    <p>Wachtwoord:</p><br>
-                    <input type="password" Name="Wachtwoord" value=""><br>
+                    <p>Password:</p><br>
+                    <input type="password" Name="Password" value=""><br>
 
                     <input type="Submit" name="Login" value="Login"><br>
                 </fieldset>
