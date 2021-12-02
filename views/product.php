@@ -14,4 +14,3 @@ include("../templates/header.php"); ?>
     </section>
 </div>
 <?php include("../templates/footer.php"); ?>
-
