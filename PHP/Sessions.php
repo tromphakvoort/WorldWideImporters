@@ -1,45 +1,27 @@
 <?php
 session_start();
 
-function ErrorSession($Message, $Login)
-{
-    $_SESSION["ErrorMessage"]=$Message;
-    if($Login===true){
-        RedirectTo("Login.php");
-    }else{
-        RedirectTo("Registreren.php");
-    }
-}
-
-function Session($Message, $Login)
-{
-    $_SESSION["Message"]=$Message;
-    if($Login===true){
-        RedirectTo("Login.php");
-    }else{
-        RedirectTo("Registreren.php");
-    }
-}
-
 function ErrorMessage()
 {
+    //Error message
     if(isset($_SESSION["ErrorMessage"])){
-        $Uitvoer = "<div class=\"ErrorMessage\">";
-        $Uitvoer .= htmlentities($_SESSION["ErrorMessage"]);
-        $Uitvoer .= "</div>";
+        $Execute = "<div class=\"ErrorMessage\">";
+        $Execute .= htmlentities($_SESSION["ErrorMessage"]);
+        $Execute .= "</div>";
         $_SESSION["FoutMessage"]=null;
-        return $Uitvoer;
+        return $Execute;
     }
 }
 
 function Message()
 {
+    //Succes message
     if(isset($_SESSION["Message"])){
-        $Uitvoer = "<div class=\"Message\">";
-        $Uitvoer .= htmlentities($_SESSION["Message"]);
-        $Uitvoer .= "</div>";
+        $Execute = "<div class=\"Message\">";
+        $Execute .= htmlentities($_SESSION["Message"]);
+        $Execute .= "</div>";
         $_SESSION["Message"]=null;
-        return $Uitvoer;
+        return $Execute;
     }
 }
 ?>

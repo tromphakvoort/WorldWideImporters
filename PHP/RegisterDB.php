@@ -1,6 +1,6 @@
 <?php require_once("PHP/Session.php"); ?>
 <?php require_once("CSS/Style.css"); ?>
-<?php require_once("PHP/Functies.php"); ?>
+<?php require_once("PHP/Functions.php"); ?>
 <?php require_once("PHP/DB.php"); ?>
 <?php
 if (isset($_POST["Registreren"])) {
@@ -12,18 +12,23 @@ if (isset($_POST["Registreren"])) {
 
     // Validate data
     if (empty($Email) && empty($HerEmail) && empty($Password) && empty($HerPassword)) {
-        ErrorSession("Alle velden moeten ingevuld zijn", false);
+        $_SESSION["ErrorMessage"] = "Alle velden moeten ingevuld zijn";
+        RedirectTo("Registreren.php");
     } elseif ($Email !== $HerEmail) {
-        ErrorSession("Emails komen niet overeen", false);
+        $_SESSION["ErrorMessage"] = "Emails komen niet overeen";
+        RedirectTo("Registreren.php")
     } elseif ($Password !== $HerPassword) {
-        ErrorSession("Passworden komen niet overeen", false);
+        $_SESSION["ErrorMessage"] = "Passworden komen niet overeen";
+        RedirectTo("Registreren.php")
     } elseif (strlen($Password) < 8) {
-        ErrorSession("Password moet minimaal 8 waarden bevatten", false);
+        $_SESSION["ErrorMessage"] = "Password moet minimaal 8 waarden bevatten";
+        RedirectTo("Registreren.php")
     } elseif (CheckEmail($Email)) {
-        ErrorSession("Email word al gebruikt", false);
+        $_SESSION["ErrorMessage"] = "Email word al gebruikt";
+        RedirectTo("Registreren.php")
     } else {
-        global $ConnectieDB;
-        $Query = "INSERT INTO users(email,Password,token,Active)VALUES('$Email', '$Password', '$Token', 'OFF')";
+        global $ConnectionDB;
+        $Query = "INSERT INTO users(email,password,token,active)VALUES('$Email', '$Password', '$Token', 'OFF')";
         $Execute = mysql_query($Query);
         if ($Execute) {
             EmailSend();

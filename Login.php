@@ -19,6 +19,10 @@
                     <p>Password:</p><br>
                     <input type="password" Name="Password" value=""><br>
 
+                    <input type="checkbox" Name="Remember"><p>Onthoud mij</p><br>
+
+                    <a href="AccountHerstel.php"><span class="FieldInfo">Wachtwoord vergeten</span></a>
+
                     <input type="Submit" name="Login" value="Login"><br>
                 </fieldset>
             </form>

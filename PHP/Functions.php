@@ -33,7 +33,7 @@ function PasswordCheck($Password, $CurrentHash)
     }
 }
 
-function CheckEmail($Email)
+function CheckEmail($Email) //Control if email exists
 {
     global $ConnectionDB;
     $Query = "SELECT * FROM users WHERE email='$Email'";
@@ -66,7 +66,7 @@ function AccountActive()
         return false;
     }
 }
-function EmailSend()
+function EmailSend() //Send mail with token for setting account active
 {
     global $ConnectionDB;
     $HashedPassword = PasswordEncrypt($Password);
@@ -77,12 +77,21 @@ function EmailSend()
         $Body = 'Hi, Hier is u activatie link http://localhost/Registreren/Actieveren.php?token='.$Token;
         $SenderEmail = "no-reply@WWI.nl";
         if(mail($Email, $Subject, $Body, $SenderEmail)){
-            Session("Controleer u email voor activatie", true);
+            $_SESSION["Message"] = "Controleer u email voor activatie";
+            RedirectTo("Login.php");
         }else{
-            Session("Probeer het opnieuw", false);
+            $_SESSION["ErrorMessage"] = "Probeer het opnieuw";
+            RedirectTo("Registreren.php");
         }
     }else{
-        Session("Probeer het opnieuw", false);
+        $_SESSION["ErrorMessage"] = "Probeer het opnieuw";
+        RedirectTo("Registreren.php");
+    }
+}
+function Login()
+{
+    if(isset($_SESSION["UserEmail"])||isset($_COOKIE["SettingEmail"])){
+        return true;
     }
 }
 ?>
