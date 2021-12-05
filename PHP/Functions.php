@@ -1,4 +1,4 @@
-<?php require_once("PHP/Session.php"); ?>
+<?php require_once("PHP/Sessions.php"); ?>
 <?php
 function RedirectTo($Location)
 {

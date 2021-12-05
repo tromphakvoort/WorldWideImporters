@@ -1,4 +1,4 @@
-<?php require_once("PHP/Session.php");?>
+<?php require_once("PHP/Sessions.php");?>
 <?php require_once("PHP/Functions.php");?>
 <!DOCTYPE>
 <html>
@@ -16,7 +16,7 @@
                 <div id="menu">
                     <ul>
                         <li><a href="Index.php">Home</a></li>
-                        <li><a href="Index.php">Shoppen</a></li>
+                        <li><a href="Shopping.php">Shoppen</a></li>
                         <li><a href="Index.php">Over ons</a></li>
                         <li><a href="Index.php">Contact</a></li>
                         <li><a href="Index.php">Login</a></li>

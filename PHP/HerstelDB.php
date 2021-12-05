@@ -1,4 +1,4 @@
-<?php require_once("PHP/Session.php"); ?>
+<?php require_once("PHP/Sessions.php"); ?>
 <?php require_once("CSS/Style.css"); ?>
 <?php require_once("PHP/Functions.php"); ?>
 <?php require_once("PHP/DB.php"); ?>
