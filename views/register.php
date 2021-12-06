@@ -1,34 +1,42 @@
-<?php require_once("PHP/RegistrerenDB.php"); ?>
+<?php $title = "Homepage | World Wide Importers";
+include("../templates/header.php"); ?>
 
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Nu registreren</title>
-    </head>
+<div class="App">
+    <div class="vertical-center">
+        <div class="inner-block">
+            <form action="" method="post">
+                <h3>Register</h3>
+                <div class="form-group">
+                    <label>First name</label>
+                    <input type="text" class="form-control" name="firstname" id="firstName" />
+                </div>
 
-    <body>
-        <div id="Registreren">
-            <div id="Bericht">
-                <?php echo FoutBericht(); ?>
-                <?php echo Bericht(); ?>
-            </div>
-            <form action="register.php" method="post">
-                <fieldset>
-                    <p>Email:</p><br>
-                    <input type="text" Name="Email" value=""><br>
+                <div class="form-group">
+                    <label>Last name</label>
+                    <input type="text" class="form-control" name="lastname" id="lastName" />
+                </div>
 
-                    <p>Herhaal email:</p><br>
-                    <input type="text" Name="Her-Email" value=""><br>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" id="email" />
+                </div>
 
-                    <p>Wachtwoord:</p><br>
-                    <input type="password" Name="Wachtwoord" value=""><br>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" />
+                </div>
 
-                    <p>Herhaal wachtwoord:</p><br>
-                    <input type="password" Name="Her-Wachtwoord" value=""><br>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" id="password" />
+                </div>
 
-                    <input type="Submit" name="Submit" value="Registreren"><br>
-                </fieldset>
+                <button type="submit" name="submit" id="submit" class="btn btn-outline-primary btn-lg btn-block">
+                    Sign up
+                </button>
             </form>
-        </div>  
-    </body>
-</html>
+        </div>
+    </div>
+</div>
+
+<?php include("../templates/footer.php"); ?>

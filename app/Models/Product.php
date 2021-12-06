@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Database;
+
 class Product {
     protected $id;
     protected $title;
@@ -116,7 +118,9 @@ class Product {
     }
 
 //    public function read(int $id) {
-//        //
+//        $connection = Database::getConnection();
+//        $result = mysqli_query($connection, "SELECT * FROM products WHERE id = '{$id}'");
+//        return $result;
 //    }
 
     // TEST function, function above needs Database connection!
@@ -130,11 +134,16 @@ class Product {
 
         return $this;
     }
+
     public function update(int $id, array $data) {
         //
     }
 
     public function delete(int $id) {
         //
+    }
+
+    public function getProductByPrice(int $price) {
+
     }
 }

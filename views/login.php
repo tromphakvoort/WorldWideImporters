@@ -1,27 +1,28 @@
-<?php require_once("PHP/LoginDB.php"); ?>
+<?php $title = "Login | World Wide Importers";
+include("../templates/header.php"); ?>
 
-<!DOCTYPE>
-<html>
-    <head>Login</title>
-    </head>
+<!-- Login form -->
+<div class="App">
+    <div class="vertical-center">
+        <div class="inner-block">
+            <form action="" method="post">
+                <h3>Login</h3>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email_signin" id="email_signin" />
+                </div>
 
-    <body>
-        <div id="Login">
-            <div id="Bericht">
-                <?php echo FoutBericht(); ?>
-                <?php echo Bericht(); ?>
-            </div>
-            <form action="login.php" method="post">
-                <fieldset>
-                    <p>Email:</p><br>
-                    <input type="text" Name="Email" value=""><br>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password_signin" id="password_signin" />
+                </div>
 
-                    <p>Wachtwoord:</p><br>
-                    <input type="password" Name="Wachtwoord" value=""><br>
-
-                    <input type="Submit" name="Login" value="Login"><br>
-                </fieldset>
+                <button type="submit" name="login" id="sign_in"
+                        class="btn btn-outline-primary btn-lg btn-block">Sign
+                    in</button>
             </form>
-        </div>  
-    </body>
-</html>
+        </div>
+    </div>
+</div>
+
+<?php include("../templates/footer.php"); ?>
