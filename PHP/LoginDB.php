@@ -1,24 +1,24 @@
-<?php require_once("PHP/Sessie.php"); ?>
+<?php require_once("PHP/Sessions.php"); ?>
 <?php require_once("CSS/Style.css"); ?>
-<?php require_once("PHP/Functies.php"); ?>
+<?php require_once("PHP/Functions.php"); ?>
 <?php require_once("PHP/DB.php"); ?>
 
 <?php
 if(isset($_POST["Login"])){
     $Email = mysql_real_escape_string($_POST["Email"]);
-    $Wachtwoord = mysql_real_escape_string($_POST["Wachtwoord"]);
-    if(empty($Email) && empty($Wachtwoord)){
-        FoutSessie("Alle velden moeten ingevuld zijn", true);
+    $Password = mysql_real_escape_string($_POST["Password"]);
+    if(empty($Email) && empty($Password)){
+        ErrorSession("Alle velden moeten ingevuld zijn", true);
     }else{
-        if(EmailActief()){
-            $GevondenAccount = LoginPoging($Email, $Wachtwoord);
-            if($GevondenAccount){
+        if(EmailActive()){
+            $FoundAccount = LoginAtempt($Email, $Password);
+            if($FoundAccount){
                 Redirect_To("Index.php");
             }else{
-                FoutSessie("Email of Wachtwoord klopt niet", true);
+                ErrorSession("Email of Password klopt niet", true);
             }
         }else{
-            FoutSessie("Account moet geactiveerd worden", true);
+            ErrorSession("Account moet geactiveerd worden", true);
         }
     }
 }
