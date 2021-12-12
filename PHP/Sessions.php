@@ -1,9 +1,28 @@
 <?php
 session_start();
 
+function ErrorSession($Message, $Login)
+{
+    $_SESSION["ErrorMessage"]=$Message;
+    if($Login===true){
+        RedirectTo("Login.php");
+    }else{
+        RedirectTo("Registreren.php");
+    }
+}
+
+function Session($Message, $Login)
+{
+    $_SESSION["Message"]=$Message;
+    if($Login===true){
+        RedirectTo("Login.php");
+    }else{
+        RedirectTo("Registreren.php");
+    }
+}
+
 function ErrorMessage()
 {
-    //Error message
     if(isset($_SESSION["ErrorMessage"])){
         $Execute = "<div class=\"ErrorMessage\">";
         $Execute .= htmlentities($_SESSION["ErrorMessage"]);
@@ -15,7 +34,6 @@ function ErrorMessage()
 
 function Message()
 {
-    //Succes message
     if(isset($_SESSION["Message"])){
         $Execute = "<div class=\"Message\">";
         $Execute .= htmlentities($_SESSION["Message"]);

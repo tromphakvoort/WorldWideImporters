@@ -1,4 +1,4 @@
-<?php require_once("PHP/Sessions.php"); ?>
+<?php require_once("PHP/Session.php"); ?>
 <?php
 function RedirectTo($Location)
 {
@@ -33,7 +33,7 @@ function PasswordCheck($Password, $CurrentHash)
     }
 }
 
-function CheckEmail($Email) //Control if email exists
+function CheckEmail($Email)
 {
     global $ConnectionDB;
     $Query = "SELECT * FROM users WHERE email='$Email'";
@@ -53,45 +53,6 @@ function LoginAtempt($Email, $Password)
         return true;
     }else{
         return false;
-    }
-}
-function AccountActive()
-{
-    global $ConnectionDB;
-    $Query = "SELECT * FROM users WHERE Active=true";
-    $Execute = mysql_query($Query);
-    if($Admin = mysql_num_rows($Execute)>0){
-        return true;
-    }else{
-        return false;
-    }
-}
-function EmailSend() //Send mail with token for setting account active
-{
-    global $ConnectionDB;
-    $HashedPassword = PasswordEncrypt($Password);
-    $Query = "INSERT INTO users(email,password,token,Active)VALUES('$Email','$HashedPassword','$Token',false)";
-    $Execute = mysql_query($Query);
-    if($Execute){
-        $Subject = "Activeer account";
-        $Body = 'Hi, Hier is u activatie link http://localhost/Registreren/Actieveren.php?token='.$Token;
-        $SenderEmail = "no-reply@WWI.nl";
-        if(mail($Email, $Subject, $Body, $SenderEmail)){
-            $_SESSION["Message"] = "Controleer u email voor activatie";
-            RedirectTo("Login.php");
-        }else{
-            $_SESSION["ErrorMessage"] = "Probeer het opnieuw";
-            RedirectTo("Registreren.php");
-        }
-    }else{
-        $_SESSION["ErrorMessage"] = "Probeer het opnieuw";
-        RedirectTo("Registreren.php");
-    }
-}
-function Login()
-{
-    if(isset($_SESSION["UserEmail"])||isset($_COOKIE["SettingEmail"])){
-        return true;
     }
 }
 ?>

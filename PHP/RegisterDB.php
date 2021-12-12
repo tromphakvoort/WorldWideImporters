@@ -1,4 +1,4 @@
-<?php require_once("PHP/Sessions.php"); ?>
+<?php require_once("PHP/Session.php"); ?>
 <?php require_once("CSS/Style.css"); ?>
 <?php require_once("PHP/Functions.php"); ?>
 <?php require_once("PHP/DB.php"); ?>
@@ -8,27 +8,21 @@ if (isset($_POST["Registreren"])) {
     $HerEmail = mysql_real_escape_string($_POST["Her-Email"]);
     $Password = mysql_real_escape_string($_POST["Password"]);
     $HerPassword = mysql_real_escape_string($_POST["Her-Password"]);
-    $Token = bin2hex(openssl_random_pseudo_bytes(40));
 
     // Validate data
     if (empty($Email) && empty($HerEmail) && empty($Password) && empty($HerPassword)) {
-        $_SESSION["ErrorMessage"] = "Alle velden moeten ingevuld zijn";
-        RedirectTo("Registreren.php");
+        ErrorSession("Alle velden moeten ingevuld zijn", false);
     } elseif ($Email !== $HerEmail) {
-        $_SESSION["ErrorMessage"] = "Emails komen niet overeen";
-        RedirectTo("Registreren.php")
+        ErrorSession("Emails komen niet overeen", false);
     } elseif ($Password !== $HerPassword) {
-        $_SESSION["ErrorMessage"] = "Passworden komen niet overeen";
-        RedirectTo("Registreren.php")
+        ErrorSession("Wachtwoorden komen niet overeen", false);
     } elseif (strlen($Password) < 8) {
-        $_SESSION["ErrorMessage"] = "Password moet minimaal 8 waarden bevatten";
-        RedirectTo("Registreren.php")
+        ErrorSession("Wachtwoord moet minimaal 8 waarden bevatten", false);
     } elseif (CheckEmail($Email)) {
-        $_SESSION["ErrorMessage"] = "Email word al gebruikt";
-        RedirectTo("Registreren.php")
+        ErrorSession("Email word al gebruikt", false);
     } else {
-        global $ConnectionDB;
-        $Query = "INSERT INTO users(email,password,token,active)VALUES('$Email', '$Password', '$Token', 'OFF')";
+        global $ConnectieDB;
+        $Query = "INSERT INTO users(email,password)VALUES('$Email', '$Password')";
         $Execute = mysql_query($Query);
         if ($Execute) {
             EmailSend();
