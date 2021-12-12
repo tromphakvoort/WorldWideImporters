@@ -5,9 +5,9 @@ function FoutSessie($Bericht, $Login)
 {
     $_SESSION["FoutBericht"]=$Bericht;
     if($Login===true){
-        OmleidenNaar("Login.php");
+        OmleidenNaar("login.php");
     }else{
-        OmleidenNaar("Registreren.php");
+        OmleidenNaar("register.php");
     }
 }
 
@@ -15,9 +15,9 @@ function Sessie($Bericht, $Login)
 {
     $_SESSION["Bericht"]=$Bericht;
     if($Login===true){
-        OmleidenNaar("Login.php");
+        OmleidenNaar("login.php");
     }else{
-        OmleidenNaar("Registreren.php");
+        OmleidenNaar("register.php");
     }
 }
 
