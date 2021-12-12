@@ -40,13 +40,13 @@ class Router
             $params = array_merge(array_slice($matcher, 2, -1), array('routes' => $routes));
 
             call_user_func_array(array($classInstance, $matcher['method']), $params);
-
+            // tekstueel aangepast - Frederik
         } catch (MethodNotAllowedException $e) {
             echo 'Route method is not allowed.';
         } catch (ResourceNotFoundException $e) {
-            echo 'Route does not exists.';
+            echo 'Route does not exist.';
         } catch (NoConfigurationException $e) {
-            echo 'Configuration does not exists.';
+            echo 'Configuration does not exist.';
         }
     }
 }
