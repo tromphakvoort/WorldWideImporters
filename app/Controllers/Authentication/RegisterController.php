@@ -3,6 +3,7 @@
 namespace App\Controllers\Authentication;
 
 use App\Database;
+use Symfony\Component\Routing\RouteCollection;
 
 class RegisterController
 {
@@ -11,6 +12,10 @@ class RegisterController
 
     function __construct() {
         $this->connection = Database::getConnection();
+    }
+
+    public function index(RouteCollection $routes) {
+        require_once APP_ROOT . '/views/authentication/register.php';
     }
 
     public function register() {

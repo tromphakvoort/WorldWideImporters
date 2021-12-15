@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Authentication;
 
 use Symfony\Component\Routing\RouteCollection;
 use const APP_ROOT;

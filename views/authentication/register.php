@@ -1,7 +1,7 @@
 <?php $title = "Homepage | World Wide Importers";
-include("../templates/header.php"); ?>
+include APP_ROOT . "/templates/header.php"; ?>
 
-<div class="App">
+<div class="container">
     <div class="vertical-center">
         <div class="inner-block">
             <form action="" method="post">
@@ -39,4 +39,4 @@ include("../templates/header.php"); ?>
     </div>
 </div>
 
-<?php include("../templates/footer.php"); ?>
+<?php include APP_ROOT . "/templates/footer.php"; ?>
