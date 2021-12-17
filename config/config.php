@@ -9,7 +9,7 @@ define('URL_ROOT', '/');
 define('URL_SUBFOLDER', '');
 
 // DB Params
-define('DB_HOST', '10.10.1.3');
-define('DB_USER', 'webserver');
-define('DB_PASSWORD', 'w7w71nekZiRSo5Vpwz5W');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 define('DB_NAME', 'webshop_wwi');
