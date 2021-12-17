@@ -13,7 +13,6 @@ class HomepageController
         $routeToProduct = str_replace('{id}', 1, $routes->get('product')->getPath());
 
         $products = $this->getProducts();
-
         // Require homepage view
         require_once APP_ROOT . '/views/home.php';
     }

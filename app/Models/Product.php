@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Database;
+use App\Helpers\Utils;
 
 class Product
 {
@@ -24,7 +25,7 @@ class Product
         $connection = Database::getConnection();
 
         // Insert product query
-        $sql = "INSERT INTO product (
+        $sql = "INSERT INTO products (
                      id,
                      product_name,
                      description,
@@ -94,19 +95,20 @@ class Product
         // Initialize empty array
         $products = [];
 
-        $result = mysqli_query($connection, "SELECT TOP '$amount' * FROM products");
+        $result = mysqli_query($connection, "SELECT * FROM webshop_wwi.products LIMIT $amount");
 
         if(mysqli_num_rows($result) > 0 ){
-            foreach (mysqli_fetch_assoc($result) as $dbproduct) {
+            $rows = Utils::resultToArray($result);
+            foreach ($rows as $row) {
                 $product = new Product();
 
-                $product->setId($dbproduct['id']);
-                $product->setProductName($dbproduct['product_name']);
-                $product->setDescription($dbproduct['description']);
-                $product->setPriceAmount($dbproduct['price_amount']);
-                $product->setStock($dbproduct['stock']);
-                $product->setPriceCurrency($dbproduct['price_currency']);
-                $product->setPricePrecision($dbproduct['price_precision']);
+                $product->setId($row['id']);
+                $product->setProductName($row['product_name']);
+                $product->setDescription($row['description']);
+                $product->setPriceAmount($row['price_amount']);
+                $product->setStock($row['stock']);
+                $product->setPriceCurrency($row['price_currency']);
+                $product->setPricePrecision($row['price_precision']);
 
                 array_push($products, $product);
             }

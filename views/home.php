@@ -6,13 +6,14 @@ include("../templates/header.php"); ?>
         <p>
             <a href="<?php echo $routeToProduct ?>">Check the first product</a>
         </p>
-        <?php foreach($products as $product) {
-            echo "<ul>";
-            foreach ($product as $key => $item) {
-                echo "<li> '$key': '$item' </li>";
-            }
-            echo "</ul>";
-        } ?>
+        <div>
+            <?php foreach ($products as $product) {
+                print("<ul>
+<li>" . $product->getProductName() . "</li>
+<li>$ " . round($product->getPriceAmount() / 100, $product->getPricePrecision()) . "</li>
+</ul>");
+            } ?>
+        </div>
         <section>
 </div>
 <?php include("../templates/footer.php"); ?>
