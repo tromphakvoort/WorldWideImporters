@@ -72,19 +72,6 @@ class Product
         return new Product();
     }
 
-    // TEST function, function above needs Database connection!
-//    public function read(int $id)
-//    {
-//        $this->product_name = "My first Product";
-//        $this->description = "Lorem ipsum Lorem ipsum";
-//        $this->stock = 12;
-//        $this->price_amount = 254;
-//        $this->price_currency = "EUR";
-//        $this->price_precision = 2;
-//
-//        return $this;
-//    }
-
     public static function update(int $id, array $data)
     {
         //
@@ -98,6 +85,36 @@ class Product
     public static function getProductByPrice(int $price)
     {
 
+    }
+
+    public static function getProducts(int $amount): array {
+        // Database connection
+        $connection = Database::getConnection();
+
+        // Initialize empty array
+        $products = [];
+
+        $result = mysqli_query($connection, "SELECT TOP '$amount' * FROM products");
+
+        if(mysqli_num_rows($result) > 0 ){
+            foreach (mysqli_fetch_assoc($result) as $dbproduct) {
+                $product = new Product();
+
+                $product->setId($dbproduct['id']);
+                $product->setProductName($dbproduct['product_name']);
+                $product->setDescription($dbproduct['description']);
+                $product->setPriceAmount($dbproduct['price_amount']);
+                $product->setStock($dbproduct['stock']);
+                $product->setPriceCurrency($dbproduct['price_currency']);
+                $product->setPricePrecision($dbproduct['price_precision']);
+
+                array_push($products, $product);
+            }
+        } else {
+            die("No products found 😢");
+        }
+
+        return $products;
     }
 
     /**
