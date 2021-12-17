@@ -25,20 +25,20 @@ class Product
 
         // Insert product query
         $sql = "INSERT INTO product (
-                     id, 
-                     product_name, 
-                     description, 
-                     stock, 
-                     price_amount, 
-                     price_currency, 
+                     id,
+                     product_name,
+                     description,
+                     stock,
+                     price_amount,
+                     price_currency,
                      price_precision
                  ) VALUES (
                            '$product->id',
-                           '$product->product_name', 
-                           '$product->description', 
+                           '$product->product_name',
+                           '$product->description',
                            '$product->stock',
-                           '$product->price_amount', 
-                           '$product->price_currency', 
+                           '$product->price_amount',
+                           '$product->price_currency',
                            '$product->price_precision'
                        )";
 
@@ -54,7 +54,7 @@ class Product
         $connection = Database::getConnection();
 
         // Get product from database
-        $result = mysqli_query($connection, "SELECT * FROM product WHERE id = '$id'");
+        $result = mysqli_query($connection, "SELECT * FROM products WHERE id = '$id'");
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
