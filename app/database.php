@@ -10,7 +10,7 @@ class Database
 
     private function __construct()
     {
-        $this->connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die("Database connection not established.");
+        $this->connection = mysqli_connect(10.10.1.3:, webserver, w7w71nekZiRSo5Vpwz5W, webshop_wwi) or die("Database connection not established.");
     }
 
     function __destruct()

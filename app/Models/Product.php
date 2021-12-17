@@ -7,7 +7,7 @@ use App\Database;
 class Product
 {
 
-    protected int $id;
+    protected ?int $id;
     protected string $product_name;
     protected string $description;
     protected int $stock;
@@ -33,7 +33,7 @@ class Product
                      price_currency, 
                      price_precision
                  ) VALUES (
-                           5,
+                           '$product->id',
                            '$product->product_name', 
                            '$product->description', 
                            '$product->stock',
@@ -58,6 +58,7 @@ class Product
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
+                $this->setId($row['id']);
                 $this->setProductName($row['product_name']);
                 $this->setDescription($row['description']);
                 $this->setPriceAmount($row['price_amount']);
