@@ -6,6 +6,9 @@ include("../templates/header.php"); ?>
         <p>
             <a href="<?php echo $routeToProduct ?>">Check the first product</a>
         </p>
+        <p>
+            <a href="<?php echo $routeToCategory ?>">Bekijk hier de categoriën</a>
+        </p>
         <section>
 </div>
 <?php include("../templates/footer.php"); ?>

@@ -13,12 +13,12 @@ class categories
   protected int $updated_at;
 {
   //crud OPERATIONS
-  public function read(int $id) : category_name
+  public function read(int $id) : Categories
 
   //database connection
   $connection = Database::getConnection();
 
-  $result = mysqli_query($connection, "SELECT * from categories WHERE ID = '$id'");
+  $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
 
   if (mysqli_num_rows($result) === 1) {
     while ($row = mysqli_fetch_assoc($result)){
@@ -33,5 +33,11 @@ class categories
 
     }
   }
-}
-}
+  /**
+  *@return mixed
+  */
+
+  public function getcategoryname()
+  {
+      return $this->category_name
+    }
