@@ -10,4 +10,4 @@ $routes->add('product', new Route(constant('URL_SUBFOLDER') . '/product/{id}', a
 
 $routes->add('homepage', new Route(constant('URL_SUBFOLDER') . '/', array('controller' => 'PageController', 'method' => 'indexAction'), array()));
 
-$routes->add('category', new ROUTE(constant('URL_SUBFOLDER') . '/category/{id}', array('controller' => 'CategoryPageController', 'method' => 'showAction'), array('id' => '[0-9]+')));
+$routes->add('category', new ROUTE(constant('URL_SUBFOLDER') . '/category/{id}', array('controller' => 'CategoryController', 'method' => 'showAction'), array('id' => '[0-9]+')));

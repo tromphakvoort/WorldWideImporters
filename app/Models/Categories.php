@@ -1,43 +1,44 @@
 <?php
 
-phpnamespace App\Models;
+namespace App\Models;
 
 use App\Database;
 
-class categories
+class Categories
 {
 
-  protected int $id;
-  protected string $category_name;
-  protected int $created_at;
-  protected int $updated_at;
-{
-  //crud OPERATIONS
-  public function read(int $id) : Categories
+    protected int $id;
+    protected string $category_name;
+    protected int $created_at;
+    protected int $updated_at;
 
-  //database connection
-  $connection = Database::getConnection();
+    //crud OPERATIONS
+    public function read(int $id): Categories
+    {
 
-  $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
+        //database connection
+        $connection = Database::getConnection();
 
-  if (mysqli_num_rows($result) === 1) {
-    while ($row = mysqli_fetch_assoc($result)){
-      $this->setCategoryName($row['category_name']);
+        $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
+
+        if (mysqli_num_rows($result) === 1) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $this->setCategoryName($row['category_name']);
+            }
+
+            return $this;
+        }
+        return new $category_name();
+
+
     }
 
-    return $this;
-  }
-  return new $category_name();
+    /**
+     * @return mixed
+     */
 
-
-
+    public function getcategoryname()
+    {
+        return $this->category_name;
     }
-  }
-  /**
-  *@return mixed
-  */
-
-  public function getcategoryname()
-  {
-      return $this->category_name
-    }
+}
