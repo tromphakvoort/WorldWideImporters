@@ -24,7 +24,7 @@
                   <a class="nav-link" href="#">Over ons</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="<?php echo $routes->get('contact')->getPath() ?>">Contact</a>
                 </li>
                 <li class="searchbar">
                   <input type="text" placeholder="Zoeken...">

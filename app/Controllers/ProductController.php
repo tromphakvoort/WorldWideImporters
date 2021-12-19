@@ -10,6 +10,7 @@ class ProductController {
     public function showAction (int $id, RouteCollection $routes) {
         // Initialize a new product object
         $newProduct = new Product();
+
         // Read the product from the database
         $newProduct->read($id);
         // Update the product id to be one higher
