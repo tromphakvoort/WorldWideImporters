@@ -21,7 +21,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Over ons</a>
+                  <a class="nav-link" href="<?php echo $routes->get('about')->getPath() ?>">Over ons</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('contact')->getPath() ?>">Contact</a>
