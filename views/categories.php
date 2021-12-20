@@ -1,4 +1,4 @@
-<?php $title = $category_name->getcategoryname() . " | World Wide Importers";
+<?php " | World Wide Importers";
 include("../templates/header.php"); ?>
 <div class="container">
     <section>

@@ -9,6 +9,8 @@ class CategoryController
 {
   public function showAction(int $id, RouteCollection $routes)
   {
+      $category = Categories();
+      $category->read($id + 1);
 
     require_once APP_ROOT . '/views/categories.php';
   }

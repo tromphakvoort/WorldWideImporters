@@ -23,7 +23,7 @@ class Categories
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $this->setCategoryName($row['category_name']);
+                $this->getcategoryname($row['category_name']);
             }
 
             return $this;
