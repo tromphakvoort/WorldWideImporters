@@ -13,31 +13,31 @@ class Categories
     protected int $updated_at;
 
     //crud OPERATIONS
-    public function read(int $id): Categories
+    public function read(int $id): string
     {
 
         //database connection
         $connection = Database::getConnection();
 
-        $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
+        $result = mysqli_query($connection, "SELECT * from categories C JOIN productcategories PC ON PC.fk_prodcat_cat_id = C.id JOIN product P ON PC.fk_prodcat_product_id = P.id WHERE id = '$id'");
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
-                $this->getcategoryname($row['category_name']);
+                $this->getCategoryName($row['category_name']);
             }
 
-            return $this;
         }
-        return new $category_name();
 
+        return $this->category_name;
 
-    }
+       }
 
     /**
      * @return mixed
      */
 
-    public function getcategoryname()
+    public function getCategoryName(): mixed
+
     {
         return $this->category_name;
     }
