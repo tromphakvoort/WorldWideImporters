@@ -32,7 +32,31 @@ class Categories
         }
         return new Categories();
     }
+    public static function getCategories(int $amount): array {
+        // Database connection
+        $connection = Database::getConnection();
 
+        // Initialize empty array
+        $categories = [];
+
+        $result = mysqli_query($connection, "SELECT * FROM categories LIMIT $amount");
+
+        if(mysqli_num_rows($result) > 0 ){
+            $rows = Utils::resultToArray($result);
+            foreach ($rows as $row) {
+                $category_name = new Categories();
+
+                $category_name->setId($row['id']);
+                $category_name->setCategoryName($row['product_name']);
+
+                array_push($categories, $category_name);
+            }
+        } else {
+            die("No categories found 😢");
+        }
+
+        return $categpries;
+    }
     /**
      * @return string
      */

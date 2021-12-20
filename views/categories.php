@@ -11,8 +11,8 @@ include("../templates/header.php"); ?>
         <div>
             <?php foreach ($categories as $category_name) {
                 print("<ul>
-<li>" . $category_name->getCategoryName() . "</li>
-</ul>");
+                        <li>" . $category_name->getCategoryName() . "</li>
+                        </ul>");
             } ?>
         </div>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
