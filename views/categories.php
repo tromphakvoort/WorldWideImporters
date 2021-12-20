@@ -4,10 +4,17 @@ include("../templates/header.php"); ?>
     <section>
         <h1>Categorieën:</h1>
         <ul>
-            <li><?php echo $category_name->getCategoryName($id) ?></li>
-            <li><?php echo $category_name->getCategoryName($id +1) ?></li>
-            <li><?php echo $category_name->getCategoryName($id +2) ?></li>
+            <li><?php echo $category_name->getCategoryName() ?></li>
+            <li><?php echo $category_name->getCategoryName() ?></li>
+            <li><?php echo $category_name->getCategoryName() ?></li>
         </ul>
+        <div>
+            <?php foreach ($categories as $category_name) {
+                print("<ul>
+<li>" . $category_name->getCategoryName() . "</li>
+</ul>");
+            } ?>
+        </div>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     </section>
 </div>
