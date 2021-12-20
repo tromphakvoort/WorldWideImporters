@@ -20,7 +20,7 @@ class Categories
         //database connection
         $connection = Database::getConnection();
 
-        $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
+        $result = mysqli_query($connection, "SELECT * from categories LEFT JOIN  WHERE id = '$id'");
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
