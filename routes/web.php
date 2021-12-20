@@ -16,3 +16,6 @@ $routes->add('contact', new Route(constant('URL_SUBFOLDER') . '/contact', array(
 
 // About page route
 $routes->add('about', new Route(constant('URL_SUBFOLDER') . '/about', array('controller' => 'StaticPageController', 'method' => 'aboutPage'), array()));
+
+// Login page route
+$routes->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'LoginController', 'method' => 'loginPage'), array()));
