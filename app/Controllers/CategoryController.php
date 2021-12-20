@@ -10,7 +10,7 @@ class CategoryController
   public function showAction(int $id, RouteCollection $routes)
   {
       $category_name = new Categories();
-      $category_name->read($id + 1);
+      $category_name->read($id);
 
 
 
