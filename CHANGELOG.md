@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.3...v1.0.4) (2021-12-21)
+
+
+### Bug Fixes
+
+* Add comment ([a911484](https://github.com/tromphakvoort/WorldWideImporters/commit/a911484192885cfd93a17306d2de50c57cf9d778))
+* Change filename ([ec7ee98](https://github.com/tromphakvoort/WorldWideImporters/commit/ec7ee98b10f3bf36362703ebedb6833c72ebbea8))
+* Clean Repository ([e53384f](https://github.com/tromphakvoort/WorldWideImporters/commit/e53384f42ab8eee21ebb26257c6bab7b79c07cdb))
+* Fix database variables, use config.php for values ([c48e04e](https://github.com/tromphakvoort/WorldWideImporters/commit/c48e04ead75c2ac97213d4cc23c449675c113335))
+* Fixed the showAction function, update product model to allow a nullable id ([13fa089](https://github.com/tromphakvoort/WorldWideImporters/commit/13fa089ffb9e777d09c72592da41d09ea778238e))
+
 ### [1.0.3](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.2...v1.0.3) (2021-12-10)
 
 
