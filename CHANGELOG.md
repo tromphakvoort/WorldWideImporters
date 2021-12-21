@@ -1,0 +1,62 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.1.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.4...v1.1.0) (2021-12-21)
+
+
+### Features
+
+* Add carousel to homepage ([91b6c19](https://github.com/tromphakvoort/WorldWideImporters/commit/91b6c1944449d72d680cf3cccbcd3c337f763ff9))
+* Add get product function for homepage ([a79f260](https://github.com/tromphakvoort/WorldWideImporters/commit/a79f26037d349bca843dc82b2ea127c08704fdb5))
+* Add navigation bar template ([de42c15](https://github.com/tromphakvoort/WorldWideImporters/commit/de42c153f13687e338e8d6a76794d2461c24a9f3))
+* Add static contact page ([d76c2d4](https://github.com/tromphakvoort/WorldWideImporters/commit/d76c2d433e69605eec0a5c7619f6a2ad0a8be937))
+
+
+### Bug Fixes
+
+* Add URL_SUBFOLDER for logo src ([4f03b4b](https://github.com/tromphakvoort/WorldWideImporters/commit/4f03b4b63fc7c0452f7b88b7474f37cf6d6133fe))
+* Change controller name to be clearer ([7103c7d](https://github.com/tromphakvoort/WorldWideImporters/commit/7103c7d10aaefdf6d91a0c167527bb612356d2eb))
+* Fix path to logo ([8bb1dff](https://github.com/tromphakvoort/WorldWideImporters/commit/8bb1dffd9fd57cf3ee14170d3523464409ba18e4))
+* Fix query and view ([56d8f37](https://github.com/tromphakvoort/WorldWideImporters/commit/56d8f37904f49e57b5f73f53a687c3db29506e1d))
+
+### [1.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.3...v1.0.4) (2021-12-21)
+
+
+### Bug Fixes
+
+* Add comment ([a911484](https://github.com/tromphakvoort/WorldWideImporters/commit/a911484192885cfd93a17306d2de50c57cf9d778))
+* Change filename ([ec7ee98](https://github.com/tromphakvoort/WorldWideImporters/commit/ec7ee98b10f3bf36362703ebedb6833c72ebbea8))
+* Clean Repository ([e53384f](https://github.com/tromphakvoort/WorldWideImporters/commit/e53384f42ab8eee21ebb26257c6bab7b79c07cdb))
+* Fix database variables, use config.php for values ([c48e04e](https://github.com/tromphakvoort/WorldWideImporters/commit/c48e04ead75c2ac97213d4cc23c449675c113335))
+* Fixed the showAction function, update product model to allow a nullable id ([13fa089](https://github.com/tromphakvoort/WorldWideImporters/commit/13fa089ffb9e777d09c72592da41d09ea778238e))
+
+### [1.0.3](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.2...v1.0.3) (2021-12-10)
+
+
+### Features
+
+* Add some methods ([aaa1873](https://github.com/tromphakvoort/WorldWideImporters/commit/aaa1873e0df61c6d6abe80a21fa204fc051c6a19))
+
+### [1.0.2](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.1...v1.0.2) (2021-12-07)
+
+
+### Bug Fixes
+
+* Pull Main -> AddMVCp, Fix merge conflicts ([afd14a2](https://github.com/tromphakvoort/WorldWideImporters/commit/afd14a22ab6b39bdb8f1ff62503d03f23d77be86))
+
+### 1.0.1 (2021-12-07)
+
+
+### Features
+
+* Added MVC structure ([7aa0b5a](https://github.com/tromphakvoort/WorldWideImporters/commit/7aa0b5acff7ce3925c9b876ee62ae549e31922e8))
+* Added templates ([d588e78](https://github.com/tromphakvoort/WorldWideImporters/commit/d588e7871a78643569dcfac5e9111ca6f98eb9c7))
+* Added views and database singleton ([0dfaceb](https://github.com/tromphakvoort/WorldWideImporters/commit/0dfaceb3ed5f91eaa79cf4a654d68b9c6929163d))
+
+
+### Bug Fixes
+
+* Add data ([3e1fb07](https://github.com/tromphakvoort/WorldWideImporters/commit/3e1fb07db22dc0d9cc09acdf4f2db4ef640146ca))
+* Add function to model instead of controller ([8bcda8e](https://github.com/tromphakvoort/WorldWideImporters/commit/8bcda8eb623b7676a9ba90653fd03bcaa4677d8a))
+* Use Laravel Valet for Tromp locally ([8c1541f](https://github.com/tromphakvoort/WorldWideImporters/commit/8c1541fe6eef44e1e576ae0719bc5bf9a88e468f))
