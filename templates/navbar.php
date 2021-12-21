@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/"><?php echo(SITE_NAME) ?></a>
+        <a class="navbar-brand" href="<?php echo $routes->get('homepage')->getPath() ?>">
+            <img src=<?php echo APP_ROOT .  "/public/assets/logo.PNG" ?> alt="" width="30" height="24">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +17,7 @@
                         <li><a class="dropdown-item" href="#">Categorie 1</a></li>
                         <li><a class="dropdown-item" href="#">Categorie 2</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Categorie 3</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -24,8 +26,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo $routes->get('contact')->getPath() ?>">Contact</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li
-                <form class="form-inline">
+                <form class="d-flex">
                   <input class="form-control mr-sm-2" type="search" placeholder="Zoeken..." aria-label="Search">
                 </li>
                 <li
@@ -34,7 +38,10 @@
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                   </button>
+                </form>
                 </li>
+            </ul>
+            <ul class="navbar-nav justify-content-end">
                 <li
                   <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
@@ -43,7 +50,9 @@
                 </button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $routes->get('login')->getPath() ?>">Login</a>
+                    <a class="nav-link" href="<?php echo $routes->get('login')->getPath() ?>"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>login</a>
                 </li>
             </ul>
         </div>
