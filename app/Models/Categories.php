@@ -56,7 +56,7 @@ class Categories
             die("No categories found 😢");
         }
 
-        return $categpries;
+        return $categories;
     }
     /**
      * @return string
