@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="<?php echo $routes->get('homepage')->getPath() ?>">
-            <img src="/public/assets/logo.png" alt="World Wide Importers" width="60">
+            <img src="<?php echo URL_SUBFOLDER . "/public/assets/logo.png" ?> " alt="World Wide Importers" width="60">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
