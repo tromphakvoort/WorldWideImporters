@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.4...v1.1.0) (2021-12-21)
+
+
+### Features
+
+* Add carousel to homepage ([91b6c19](https://github.com/tromphakvoort/WorldWideImporters/commit/91b6c1944449d72d680cf3cccbcd3c337f763ff9))
+* Add get product function for homepage ([a79f260](https://github.com/tromphakvoort/WorldWideImporters/commit/a79f26037d349bca843dc82b2ea127c08704fdb5))
+* Add navigation bar template ([de42c15](https://github.com/tromphakvoort/WorldWideImporters/commit/de42c153f13687e338e8d6a76794d2461c24a9f3))
+* Add static contact page ([d76c2d4](https://github.com/tromphakvoort/WorldWideImporters/commit/d76c2d433e69605eec0a5c7619f6a2ad0a8be937))
+
+
+### Bug Fixes
+
+* Add URL_SUBFOLDER for logo src ([4f03b4b](https://github.com/tromphakvoort/WorldWideImporters/commit/4f03b4b63fc7c0452f7b88b7474f37cf6d6133fe))
+* Change controller name to be clearer ([7103c7d](https://github.com/tromphakvoort/WorldWideImporters/commit/7103c7d10aaefdf6d91a0c167527bb612356d2eb))
+* Fix path to logo ([8bb1dff](https://github.com/tromphakvoort/WorldWideImporters/commit/8bb1dffd9fd57cf3ee14170d3523464409ba18e4))
+* Fix query and view ([56d8f37](https://github.com/tromphakvoort/WorldWideImporters/commit/56d8f37904f49e57b5f73f53a687c3db29506e1d))
+
 ### [1.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.3...v1.0.4) (2021-12-21)
 
 
