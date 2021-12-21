@@ -20,7 +20,7 @@ class Categories
         //database connection
         $connection = Database::getConnection();
 
-        $result = mysqli_query($connection, "SELECT * from categories LEFT JOIN  WHERE id = '$id'");
+        $result = mysqli_query($connection, "SELECT * from categories WHERE id = '$id'");
 
         if (mysqli_num_rows($result) === 1) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -32,6 +32,7 @@ class Categories
         }
         return new Categories();
     }
+
     public static function getCategories(int $amount): array {
         // Database connection
         $connection = Database::getConnection();
@@ -47,7 +48,7 @@ class Categories
                 $category_name = new Categories();
 
                 $category_name->setId($row['id']);
-                $category_name->setCategoryName($row['product_name']);
+                $category_name->setCategoryName($row['category_name']);
 
                 array_push($categories, $category_name);
             }
