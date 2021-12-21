@@ -11,3 +11,4 @@
     <title><?php echo $title; ?></title>
 </head>
 <body>
+<?php include APP_ROOT . "/templates/navbar.php"; ?>

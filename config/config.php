@@ -10,6 +10,6 @@ define('URL_SUBFOLDER', '');
 
 // DB Params
 define('DB_HOST', '10.10.1.3');
-define('DB_USER', 'webserver');
-define('DB_PASSWORD', 'w7w71nekZiRSo5Vpwz5W');
+define('DB_USER', 'admin');
+define('DB_PASSWORD', 'Ayqy5ar988lFbefJ8wzo');
 define('DB_NAME', 'webshop_wwi');
