@@ -12,4 +12,7 @@ class StaticPageController
     public function aboutPage(RouteCollection $routes) {
         require_once APP_ROOT . '/views/about.php';
     }
+    public function category1Page(RouteCollection $routes) {
+        require_once APP_ROOT . '/views/category1.php';
+    }
 }
