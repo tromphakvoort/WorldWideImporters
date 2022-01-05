@@ -25,5 +25,6 @@
     while ($row = mysqli_fetch_assoc($result)) {
         printf ("<table><tr><th>%s</th></tr> <tr></tr><td>%s</td></tr> <tr><td> %s</td></tr> <tr>><td>%s</td></tr> <tr><td>%s</td></tr> <tr><td>%s</td></tr> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
     }
-?>
+
+    echo "<button>" . $row["product_name"] ."</button>";
 
