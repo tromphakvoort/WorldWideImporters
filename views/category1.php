@@ -1,5 +1,4 @@
 <?php $title = "Melkchocolade";
-
 //mySQLi information
     $db_host = "10.10.1.3";
     $db_username = "admin";
@@ -24,7 +23,7 @@
     $result = mysqli_query($connection, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
-        printf ("<table><th>%s</th> <td>%s</td> <td> %s</td> <td>%s</td><td>%s</td> <td>%s</td> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
+        printf ("<table><tr><th>%s</th></tr> <tr></tr><td>%s</td></tr> <tr><td> %s</td></tr> <tr>><td>%s</td></tr> <tr><td>%s</td></tr> <tr><td>%s</td></tr> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
     }
-
+?>
 
