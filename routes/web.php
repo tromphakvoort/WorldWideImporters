@@ -23,6 +23,7 @@ $httpCollection->setMethods(array('GET'));
 $postCollection = new RouteCollection();
 
 $postCollection->add('registerPOST', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'register'), array()));
+$postCollection->add('loginPOST', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'authenticate'), array()));
 
 
 // set all routes to post method
