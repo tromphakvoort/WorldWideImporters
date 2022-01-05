@@ -1,10 +1,10 @@
-<?php $title = "Homepage | World Wide Importers";
+<?php $title = "Register | World Wide Importers";
 include APP_ROOT . "/templates/header.php"; ?>
 
 <div class="container">
     <div class="vertical-center">
         <div class="inner-block">
-            <form action="" method="post">
+            <form action="/register" method="post">
                 <h3>Register</h3>
                 <div class="form-group">
                     <label>First name</label>
@@ -29,6 +29,11 @@ include APP_ROOT . "/templates/header.php"; ?>
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" class="form-control" name="password" id="password" />
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" />
                 </div>
 
                 <button type="submit" name="submit" id="submit" class="btn btn-outline-primary btn-lg btn-block">
