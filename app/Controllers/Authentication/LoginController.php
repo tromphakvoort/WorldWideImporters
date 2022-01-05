@@ -3,7 +3,6 @@
 namespace App\Controllers\Authentication;
 
 use App\Database;
-use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 use const APP_ROOT;
 
@@ -17,13 +16,19 @@ class LoginController
     }
 
     public function index(RouteCollection $routes) {
+        if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
+            // TODO: Route to logged in page!
+            header("location: /");
+            exit();
+        }
+
         require_once APP_ROOT . '/views/authentication/login.php';
     }
 
     public function authenticate(RouteCollection $routes) {
         if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
             // TODO: Route to logged in page!
-            header("location: register");
+            header("location: /");
             exit();
         }
 
@@ -35,9 +40,9 @@ class LoginController
 
             // Check if values are set
             if(empty(trim($_POST["email"]))) {
-                $username_err = "Please enter email";
+                $email_err = "Please enter email";
             } else {
-                $username = trim($_POST["email"]);
+                $email = trim($_POST["email"]);
             }
 
             if(empty(trim($_POST["password"]))) {
@@ -80,7 +85,7 @@ class LoginController
 
                                     // Redirect user to welcome page
                                     // TODO: Add welcome page
-                                    header("location: register");
+                                    header("location: /");
                                 } else {
                                     // Password is not valid, display a generic error message
                                     $login_err = "Email of wachtwoord zijn niet juist";
