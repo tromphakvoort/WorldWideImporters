@@ -8,6 +8,13 @@ include("../templates/header.php"); ?>
             <li><?php echo $category_name->getCategoryName() ?></li>
             <li><?php echo $category_name->getCategoryName() ?></li>
         </ul>
+        <div>
+            <?php foreach ($pcategories as $category_name) {
+                print("<ul>
+<li>" . $category_name->getCategoryName() . "</li>
+</ul>");
+            } ?>
+        </div>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     </section>
 </div>

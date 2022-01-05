@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Database;
+use App\Helpers\Utils;
 
 class Categories
 {

@@ -39,6 +39,11 @@ include("../templates/header.php"); ?>
 </ul>");
             } ?>
         </div>
-        <section>
+        </section>
+    <section>
+
+        <a href="<?php echo $routes->get('homepage')->getPath() ?>">Bekijk categorieën</a>
+
+    </section>
 </div>
 <?php include("../templates/footer.php"); ?>
