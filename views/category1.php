@@ -1,4 +1,5 @@
-<?php $title = "Melkchocolade";
+<?php $title = "Melkchocolade | World Wide Importers";
+include("../templates/header.php");
 //mySQLi information
     $db_host = "10.10.1.3";
     $db_username = "admin";
@@ -26,5 +27,5 @@
         printf ("<table><tr><th>%s</th></tr> <tr></tr><td>%s</td></tr> <tr><td> %s</td></tr> <tr>><td>%s</td></tr> <tr><td>%s</td></tr> <tr><td>%s</td></tr> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
     }
 
-    echo "<button>" . $row["product_name"] ."</button>";
 
+include("../templates/footer.php");
