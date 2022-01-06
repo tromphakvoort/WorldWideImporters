@@ -33,7 +33,7 @@ include("../templates/header.php");?>
 <div>
     <span>
     <a href="localhost/WorldWideImporters/product/1" target="_blank">
-            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+            <img style='height: 100%; width: 100%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
     </a>
     </span>
 
