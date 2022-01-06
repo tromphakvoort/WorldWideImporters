@@ -1,5 +1,8 @@
 <?php $title = "Melkchocolade | World Wide Importers";
-include("../templates/header.php");
+include("../templates/header.php");?>
+
+
+<?php
 //mySQLi information
     $db_host = "10.10.1.3";
     $db_username = "admin";
@@ -25,7 +28,31 @@ include("../templates/header.php");
 
     while ($row = mysqli_fetch_assoc($result)) {
         printf ("<table><tr><th>%s</th></tr> <tr></tr><td>%s</td></tr> <tr><td> %s</td></tr> <tr>><td>%s</td></tr> <tr><td>%s</td></tr> <tr><td>%s</td></tr> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
-    }
+    };
+?>
+<div>
+    <span>
+    <a href="localhost/WorldWideImporters/product/1" target="_blank">
+            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    </a>
+    </span>
 
+    <span>
+    <a href="localhost/WorldWideImporters/product/1" target="_blank">
+            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    </a>
+    </span>
 
-include("../templates/footer.php");
+    <span>
+    <a href="localhost/WorldWideImporters/product/1" target="_blank">
+            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    </a>
+    </span>
+
+    <span>
+    <a href="localhost/WorldWideImporters/product/1" target="_blank">
+            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    </a>
+    </span>
+</div>
+<?php include("../templates/footer.php");?>
