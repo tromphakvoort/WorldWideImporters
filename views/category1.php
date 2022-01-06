@@ -33,25 +33,25 @@ include("../templates/header.php");?>
 <div>
     <span>
     <a href="product/1" target="_blank">
-            <img style='height: 100%; width: 100%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
+            <img style='height: 25%; width: 25%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
     </a>
     </span>
 
     <span>
-    <a href="product/1" target="_blank">
-            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    <a href="product/2" target="_blank">
+            <img style='height: 25%; width: 25%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
     </a>
     </span>
 
     <span>
-    <a href="product/1" target="_blank">
-            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    <a href="product/3" target="_blank">
+            <img style='height: 25%; width: 25%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
     </a>
     </span>
 
     <span>
-    <a href="product/1" target="_blank">
-            <img src="public\assets\Products\category1\melkchocolade.jpg" />
+    <a href="product/4" target="_blank">
+            <img style='height: 25%; width: 25%; object-fit: contain' src='public\assets\Products\category1\melkchocolade.jpg' />
     </a>
     </span>
 </div>
