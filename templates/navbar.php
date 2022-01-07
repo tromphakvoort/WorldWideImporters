@@ -14,10 +14,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shoppen</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo $routes->get('category1')->getPath() ?>">Categorie 1</a></li>
-                        <li><a class="dropdown-item" href="#">Categorie 2</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Categorie 3</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $routes->get('category1')->getPath() ?>">Melkchocolade</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $routes->get('category2')->getPath() ?>">Pure chocolade</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $routes->get('category3')->getPath() ?>">Witte chocolade</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

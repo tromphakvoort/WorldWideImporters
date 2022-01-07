@@ -2,12 +2,11 @@
 include("../templates/header.php"); ?>
 <div class="container">
     <section>
-        <h1>My Product:</h1>
+        <h1><?php echo $product->getProductName() ?></h1>
         <ul>
-            <li><?php echo $product->getProductName() ?></li>
-            <li><?php echo $product->getDescription(); ?></li>
-            <li><?php echo $product->getPriceAmount(); ?></li>
-            <li><?php echo $product->getStock(); ?></li>
+            <li>Beschrijving: <?php echo $product->getDescription(); ?></li>
+            <li>Prijs: €<?php echo $product->getPriceAmount(); ?></li>
+            <li>Voorraad: <?php echo $product->getStock(); ?></li>
         </ul>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     </section>

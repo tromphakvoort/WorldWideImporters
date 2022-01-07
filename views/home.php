@@ -1,4 +1,6 @@
 <?php $title = "Homepage | World Wide Importers";
+// require_once("CSS/Style.css");
+
 include("../templates/header.php"); ?>
 <div class="container">
     <section>

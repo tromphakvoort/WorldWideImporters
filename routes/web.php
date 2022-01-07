@@ -20,6 +20,12 @@ $routes->add('about', new Route(constant('URL_SUBFOLDER') . '/about', array('con
 // Category1 page route
 $routes->add('category1', new Route(constant('URL_SUBFOLDER') . '/category1', array('controller' => 'StaticPageController', 'method' => 'category1Page'), array()));
 
+// Category2 page route
+$routes->add('category2', new Route(constant('URL_SUBFOLDER') . '/category2', array('controller' => 'StaticPageController', 'method' => 'category2Page'), array()));
+
+// Category3 page route
+$routes->add('category3', new Route(constant('URL_SUBFOLDER') . '/category3', array('controller' => 'StaticPageController', 'method' => 'category3Page'), array()));
+
 // Login page route
 $routes->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'LoginController', 'method' => 'loginPage'), array()));
 

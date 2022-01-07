@@ -1,6 +1,11 @@
 <?php $title = "Melkchocolade | World Wide Importers";
 include("../templates/header.php");?>
 
+<body>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
 
 <?php
 //mySQLi information
@@ -14,27 +19,31 @@ include("../templates/header.php");?>
 // select products
     $db = mysqli_select_db($connection, "webshop_wwi") or die("Error connecting to database" . mysqli_error());
 
-  //  $sql = mysqli_query($connection, "SELECT p.product_name, p.description, p.price_amount, p.stock, p.price_currency, p.price_precision, c.category_name FROM products p
-   //                                         JOIN productcategories pc ON p.id = pc.fk_prodcat_product_id
-    //                                        JOIN categories c ON pc.fk_prodcat_cat_id = c.id
-     //                                       WHERE c.id = 1 ");
+// Query for category 1
+    $results = mysqli_query($connection, "SELECT p.id, product_name, file_location, filename, mimetype FROM products p JOIN productcategories pc ON p.id=fk_prodcat_product_id JOIN attachments a ON fk_att_product_id=p.id WHERE fk_prodcat_cat_id=1");
 
- //   $query="SELECT p.id, p.product_name, p.description, p.price_amount, p.stock, p.price_currency, p.price_precision, c.category_name FROM products p
- //                                           JOIN productcategories pc ON p.id = pc.fk_prodcat_product_id
- //                                           JOIN categories c ON pc.fk_prodcat_cat_id = c.id
- //                                           WHERE c.id = 1 ";
-     $query="SELECT p.id, p.product_name  FROM products p";
-
-    $results = mysqli_query($connection, $query);
-//temporarily deactivated
- //   while ($row = mysqli_fetch_assoc($results)) {
- //       printf ("<table><tr><th>%s</th></tr> <tr></tr><td>%s</td></tr> <tr><td> %s</td></tr> <tr>><td>%s</td></tr> <tr><td>%s</td></tr> <tr><td>%s</td></tr> </table>", $row["product_name"], $row["description"], $row["price_amount"], $row["stock"], $row["price_currency"], $row["category_name"]);
- //   };
-
-    foreach($results as $result)
-
-
+// Loop through products and display them
+if ($results->num_rows > 0) {
+    while ($i = $results->fetch_assoc()) {
+    ?> <div class="card box-shadow">
+        <div class="vertical-center"> <?php echo $i["product_name"];
+        $imagelocation = $i["file_location"]. $i["filename"] . $i["mimetype"];
+        ?></div> <a href=product/<?php echo $i["id"] ?> target="_blank">
+            <img class="card-img-top" style='height: 300px; width: 300px; object-fit: contain' src="<?php echo $imagelocation; ?>" />
+        </a>
+    </div>
+    <?php echo "<br>";
+    }
+}
 ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div 'margin-left: 10%; margin-right: 10%'>
     <span>
     <a href="product/1" target="_blank">
@@ -60,4 +69,5 @@ include("../templates/header.php");?>
     </a>
     </span>
 </div>
+</body>
 <?php include("../templates/footer.php");?>

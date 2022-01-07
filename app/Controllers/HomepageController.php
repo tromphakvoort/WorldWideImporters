@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Product;
-use App\Models\Categories;
+// use App\Models\Categories;
 use Symfony\Component\Routing\RouteCollection;
 
 class HomepageController
@@ -12,7 +12,7 @@ class HomepageController
     public function index(RouteCollection $routes) {
         // URL to product with id of 1 🥇
         $routeToProduct = str_replace('{id}', 1, $routes->get('product')->getPath());
-        $routeToCategory = str_replace('{id}', 1, $routes->get('category_name')->getPath());
+    //    $routeToCategory = str_replace('{id}', 1, $routes->get('category_name')->getPath());
 
         $products = $this->getProducts();
         // Require homepage view
