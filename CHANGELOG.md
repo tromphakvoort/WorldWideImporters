@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.1.0...v1.1.1) (2022-01-06)
+
+
+### Features
+
+* Add authentication functionality ([27d2b2d](https://github.com/tromphakvoort/WorldWideImporters/commit/27d2b2d04bc4acf00ff311434cba9fc0b8919e45))
+* Add get,post route collections ([6461a0f](https://github.com/tromphakvoort/WorldWideImporters/commit/6461a0f6ed15163470ffa3a420dc9c0690fca607))
+* Add register functionality ([aa56e37](https://github.com/tromphakvoort/WorldWideImporters/commit/aa56e37001dd83b05060a138cafad1301faa4cf0))
+* Add User model ([a7b0cf9](https://github.com/tromphakvoort/WorldWideImporters/commit/a7b0cf9568cbec1ccfcfbf2857aaf08570e0105d))
+* Start of authentication function ([3ce7405](https://github.com/tromphakvoort/WorldWideImporters/commit/3ce7405ff88fe11084c0aa2f91acfbbe07f278e6))
+
+
+### Bug Fixes
+
+* Change DB config for server ([2d332cb](https://github.com/tromphakvoort/WorldWideImporters/commit/2d332cb1228b0cfbaa137ddc40ad40d657082025))
+* Fixed variable errors ([952d0af](https://github.com/tromphakvoort/WorldWideImporters/commit/952d0afddc576734b8fc5a88d3c775f63fe8b947))
+* Pull develop in AddAuthentication branch and fix merge conflicts ([8831677](https://github.com/tromphakvoort/WorldWideImporters/commit/883167793d51cbab48d11ae21742069f3b541f1d))
+
 ## [1.1.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.4...v1.1.0) (2021-12-21)
 
 
