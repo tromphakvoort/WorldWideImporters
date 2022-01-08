@@ -21,4 +21,7 @@ class StaticPageController
     public function category3Page(RouteCollection $routes) {
         require_once APP_ROOT . '/views/category3.php';
     }
+    public function cartPage(RouteCollection $routes) {
+        require_once APP_ROOT . '/views/cart.php';
+    }
 }

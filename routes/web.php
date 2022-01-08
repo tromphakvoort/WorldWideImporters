@@ -29,5 +29,8 @@ $routes->add('category3', new Route(constant('URL_SUBFOLDER') . '/category3', ar
 // Login page route
 $routes->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'LoginController', 'method' => 'loginPage'), array()));
 
-//category page route
+// category page route
 $routes->add('category', new Route(constant('URL_SUBFOLDER') . '/category/{id}', array('controller'=> 'CategoryController', 'method' => 'ShowAction'), array('id' => '[0-9]+')));
+
+// cart page route
+$routes->add('cart', new Route(constant('URL_SUBFOLDER') . '/cart', array('controller' => 'StaticPageController', 'method' => 'cartPage'), array()));
