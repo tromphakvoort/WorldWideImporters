@@ -61,8 +61,6 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
 </head>
 <body>
     <div class="container" style="width: 65%">
-        <h2>Winkelwagen</h2>
-       
         <div style="clear: both"></div>
         <h3 class="title2">Winkelwagen</h3>
         <div class="table-responsive">
