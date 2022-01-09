@@ -5,7 +5,7 @@ include("../templates/header.php"); ?>
         <h1><?php echo $product->getProductName() ?></h1>
         <ul>
             <li>Beschrijving: <?php echo $product->getDescription(); ?></li>
-            <li>Prijs: €<?php echo " . round($product->getPriceAmount() / 100, $product->getPricePrecision()) . "; ?></li>
+            <li>Prijs: €<?php $price=round($product->getPriceAmount() / 100, $product->getPricePrecision()); print($price); ?></li>
             <li>Voorraad: <?php echo $product->getStock(); ?></li>
         </ul>
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Aan winkelwagen toevoegen
