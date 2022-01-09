@@ -62,26 +62,7 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
 <body>
     <div class="container" style="width: 65%">
         <h2>Winkelwagen</h2>
-        <?php
-        if($results->num_rows > 0){
-            while ($row = mysqli_fetch_array($results)){
-        ?>
-                <div class="col-md-3">
-                    <form method="post" action="cart.php?action=add&id=<?php echo $row["id"] ?>">
-                        <div class="product">
-                            <h5 class="text-info"><?php $row["product_name"]; ?></h5>
-                            <h5 class="text-danger"><?php $row["price_amount"]; ?></h5>
-                            <input type="text" name="quantity" class="form-control" value="1">
-                            <input type="hidden" name="hidden_name" value="<?php echo $row["product_name"]; ?>">
-                            <input type="hidden" name="hidden_price" value="<?php echo $row["price_amount"]; ?>">
-                            <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success" value="Aan winkelwagen toevoegen">
-                        </div>
-                    </form>
-                </div>
-                <?php
-                }
-            }
-        ?>
+       
         <div style="clear: both"></div>
         <h3 class="title2">Winkelwagen</h3>
         <div class="table-responsive">
