@@ -1,7 +1,10 @@
 <?php $title = "Homepage | World Wide Importers";
 // require_once("CSS/Style.css");
+include("../templates/header.php");
 
-include("../templates/header.php"); ?>
+
+
+?>
 <div class="container">
     <section>
         <h1>Homepage</h1>
@@ -31,21 +34,6 @@ include("../templates/header.php"); ?>
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
-<!--        List of products-->
-        <div>
-            <?php foreach ($products as $product) {
-                print("<ul>
-<li>" . $product->getProductName() . "</li>
-<li>$ " . round($product->getPriceAmount() / 100, $product->getPricePrecision()) . "</li>
-</ul>");
-            } ?>
-        </div>
-        </section>
-    <section>
 
-        <a href="<?php echo $routes->get('homepage')->getPath() ?>">Bekijk categorieën</a>
-
-    </section>
 </div>
 <?php include("../templates/footer.php"); ?>
