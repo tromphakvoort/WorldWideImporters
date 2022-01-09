@@ -1,5 +1,8 @@
 <?php $title = $product->getProductName() . " | World Wide Importers";
-include("../templates/header.php"); ?>
+include("../templates/header.php");
+session_start();
+?>
+
 <div class="container">
     <section>
         <h1><?php echo $product->getProductName() ?></h1>
