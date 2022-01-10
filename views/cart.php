@@ -5,6 +5,12 @@ include("../templates/header.php"); ?>
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] != true) {
+    header("location: /login");
+    exit();
+}
+
 if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
