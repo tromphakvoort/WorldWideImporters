@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.1.1...v2.0.0) (2022-01-10)
+
+
+### Features
+
+* Add cart session and add to cart button to product ([807fd65](https://github.com/tromphakvoort/WorldWideImporters/commit/807fd65680a3ba6cd79164e27afdf18b45fe47ce))
+* Add header location to cart page ([0d31b81](https://github.com/tromphakvoort/WorldWideImporters/commit/0d31b8196d21a70f688dcfb6fcd89d3046f9806a))
+* Made some changes to the homepage to make it look better ([2ae8945](https://github.com/tromphakvoort/WorldWideImporters/commit/2ae89454e13c484456bccc05c0f269212b265143))
+* Made some minor html changes to make the page look better and be responsive ([0696d6b](https://github.com/tromphakvoort/WorldWideImporters/commit/0696d6b4a8da3148a921234cff21e25940731c96))
+* Protect cart route when user is not logged in ([da6b6c3](https://github.com/tromphakvoort/WorldWideImporters/commit/da6b6c3385c881806758e910d25b74839c3c879f))
+
+
+### Bug Fixes
+
+* Add target self ([a09abfb](https://github.com/tromphakvoort/WorldWideImporters/commit/a09abfb00b9877d10d1801a6b847066de34af6c8))
+* Fix function name in Categories model ([9555a1b](https://github.com/tromphakvoort/WorldWideImporters/commit/9555a1b300c74cf2e194085a73bbac989af3ac16))
+* Fix return variable ([69f0578](https://github.com/tromphakvoort/WorldWideImporters/commit/69f0578786d62bbc708588e2ee5bc680df059e2f))
+* Fix syntax errors ([4e321f8](https://github.com/tromphakvoort/WorldWideImporters/commit/4e321f8fff82d0909455cdf8b0265b3398b3f12f))
+* Fixed merge conflicts ([4c10222](https://github.com/tromphakvoort/WorldWideImporters/commit/4c1022200e227647a31f725f0124e483d1ca2482))
+* link to product ([c94f710](https://github.com/tromphakvoort/WorldWideImporters/commit/c94f7108f53d4290f68a459f727e74d4998f6b70))
+* Remove some unecessery code ([c0f4acf](https://github.com/tromphakvoort/WorldWideImporters/commit/c0f4acff7a20a122c10b8a922d22b32c3cebbb2e))
+* sql query ([c3ac163](https://github.com/tromphakvoort/WorldWideImporters/commit/c3ac163773cc8c7537f3220ffc3f5fc9f0b352cf))
+
+### [1.1.1](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.1.0...v1.1.1) (2022-01-06)
+
+
+### Features
+
+* Add authentication functionality ([27d2b2d](https://github.com/tromphakvoort/WorldWideImporters/commit/27d2b2d04bc4acf00ff311434cba9fc0b8919e45))
+* Add get,post route collections ([6461a0f](https://github.com/tromphakvoort/WorldWideImporters/commit/6461a0f6ed15163470ffa3a420dc9c0690fca607))
+* Add register functionality ([aa56e37](https://github.com/tromphakvoort/WorldWideImporters/commit/aa56e37001dd83b05060a138cafad1301faa4cf0))
+* Add User model ([a7b0cf9](https://github.com/tromphakvoort/WorldWideImporters/commit/a7b0cf9568cbec1ccfcfbf2857aaf08570e0105d))
+* Start of authentication function ([3ce7405](https://github.com/tromphakvoort/WorldWideImporters/commit/3ce7405ff88fe11084c0aa2f91acfbbe07f278e6))
+
+
+### Bug Fixes
+
+* Change DB config for server ([2d332cb](https://github.com/tromphakvoort/WorldWideImporters/commit/2d332cb1228b0cfbaa137ddc40ad40d657082025))
+* Fixed variable errors ([952d0af](https://github.com/tromphakvoort/WorldWideImporters/commit/952d0afddc576734b8fc5a88d3c775f63fe8b947))
+* Pull develop in AddAuthentication branch and fix merge conflicts ([8831677](https://github.com/tromphakvoort/WorldWideImporters/commit/883167793d51cbab48d11ae21742069f3b541f1d))
+
 ## [1.1.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.0.4...v1.1.0) (2021-12-21)
 
 
