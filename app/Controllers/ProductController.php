@@ -37,6 +37,8 @@ class ProductController {
 
                 // Push the new product to the cart in session
                 array_push($_SESSION["cart"], $product);
+
+                header('location: cart');
             } else {
                 die("No product id was found 😢");
             }
