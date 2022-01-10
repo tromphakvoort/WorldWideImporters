@@ -21,45 +21,6 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
 
 
 ?>
-<html>
-<head>
-    <link
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
-
-        *{
-            font-family: 'Titillium Web', sans-serif;
-        }
-        .product{
-            border: 1px solid #e2e2e2;
-            margin: -1px 19px 3px -1px;
-            padding: 10px;
-            text-align: center;
-            background-color: #efefed;
-        }
-        table, th, tr{
-            text-align: center;
-        }
-        .title2{
-            text-align: center;
-            color: cornflowerblue;
-            background-color: #e2e2e2;
-            padding: 2%;
-        }
-        h2{
-            text-align: center;
-            color: cornflowerblue;
-            background-color: #e2e2e2;
-            padding: 2%;
-        }
-        table th{
-            background-color: #e2e2e2;
-
-        }
-    </style>
-</head>
-<body>
     <div class="container" style="width: 65%">
         <div style="clear: both"></div>
         <h3 class="title2">Winkelwagen</h3>
@@ -99,9 +60,6 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
             </table>
         </div>
     </div>
-
-</body>
-</html>
 
 
 <?php include("../templates/footer.php"); ?>
