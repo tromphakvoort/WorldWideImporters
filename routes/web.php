@@ -53,6 +53,8 @@ $postCollection = new RouteCollection();
 $postCollection->add('registerPOST', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'register'), array()));
 $postCollection->add('loginPOST', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'authenticate'), array()));
 
+// Add to cart route
+$postCollection->add('addToCart', new Route(constant('URL_SUBFOLDER') . '/addToCart', array('controller' => 'ProductController', 'method' => 'addToCart'), array()));
 // set all routes to POST method
 $postCollection->setMethods(array('POST'));
 
