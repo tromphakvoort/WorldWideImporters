@@ -94,29 +94,13 @@ class Product
 
         // Initialize empty array
         $products = [];
-
-        $result = mysqli_query($connection, "SELECT * FROM webshop_wwi.products LIMIT $amount");
+            $result = mysqli_query($connection, "SELECT p.id, product_name, description, price_amount, stock, price_currency, price_precision,    file_location, filename, mimetype FROM webshop_wwi.products p JOIN attachments a ON fk_att_product_id=p.id LIMIT $amount");
 
         if(mysqli_num_rows($result) > 0 ){
-            $rows = Utils::resultToArray($result);
-            foreach ($rows as $row) {
-                $product = new Product();
-
-                $product->setId($row['id']);
-                $product->setProductName($row['product_name']);
-                $product->setDescription($row['description']);
-                $product->setPriceAmount($row['price_amount']);
-                $product->setStock($row['stock']);
-                $product->setPriceCurrency($row['price_currency']);
-                $product->setPricePrecision($row['price_precision']);
-
-                array_push($products, $product);
-            }
+            return Utils::resultToArray($result);
         } else {
             die("No products found 😢");
         }
-
-        return $products;
     }
 
     /**

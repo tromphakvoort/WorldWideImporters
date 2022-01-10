@@ -17,7 +17,7 @@ class RegisterController
     public function index(RouteCollection $routes) {
         if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
             // TODO: Route to logged in page!
-            header("location: /");
+            header("location: /cart");
             exit();
         }
 

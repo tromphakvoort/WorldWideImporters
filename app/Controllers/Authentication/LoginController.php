@@ -18,7 +18,7 @@ class LoginController
     public function index(RouteCollection $routes) {
         if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
             // TODO: Route to logged in page!
-            header("location: /");
+            header("location: /cart");
             exit();
         }
 
@@ -28,7 +28,7 @@ class LoginController
     public function authenticate(RouteCollection $routes) {
         if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
             // TODO: Route to logged in page!
-            header("location: /");
+            header("location: /cart");
             exit();
         }
 
@@ -76,7 +76,23 @@ class LoginController
                             if(mysqli_stmt_fetch($stmt)) {
                                 if(password_verify($password, $hashed_password)) {
                                     // Password is correct, so start a new session
-                                    session_start();
+                                    // Check if there is a session already started
+                                    if (session_status() == PHP_SESSION_NONE) {
+                                        session_start();
+                                    }
+
+                                    // Check if there is a loggedIn bool in the session
+                                    if(!isset($_SESSION['loggedIn'])) {
+                                        $_SESSION['loggedIn'] = false;
+                                    }
+                                    // Check if there is an id int in the session
+                                    if(!isset($_SESSION['id'])) {
+                                        $_SESSION['id'] = -1;
+                                    }
+                                    // Check if there is an email string in the session
+                                    if(!isset($_SESSION['email'])) {
+                                        $_SESSION['email'] = "";
+                                    }
 
                                     // Store data in session variables
                                     $_SESSION["loggedIn"] = true;
