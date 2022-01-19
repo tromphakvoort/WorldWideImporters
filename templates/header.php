@@ -97,7 +97,7 @@
             line-height: 32px;
         }
 
-        .carousel-caption d-none d-md-block {
+        .carousel-caption {
              background-color:rgba(0,0,0,0.4);
         }
 
