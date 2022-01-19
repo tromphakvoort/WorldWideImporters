@@ -1,9 +1,9 @@
 <?php $title = "Melkchocolade | World Wide Importers";
 include("../templates/header.php"); ?>
-
 <body>
 <div class="album py-5 bg-light">
     <div class="container">
+        <h1>Melkchocolade</h1>
         <div class="row">
             <?php
             //mySQLi information
