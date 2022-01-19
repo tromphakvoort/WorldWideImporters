@@ -52,6 +52,7 @@ $postCollection = new RouteCollection();
 // AUTHENTICATION ROUTES
 $postCollection->add('registerPOST', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'register'), array()));
 $postCollection->add('loginPOST', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'authenticate'), array()));
+$postCollection->add('logout', new Route(constant('URL_SUBFOLDER') . '/logout', array('controller' => 'Authentication\LoginController', 'method' => 'logout'), array()));
 
 // Add to cart route
 $postCollection->add('addToCart', new Route(constant('URL_SUBFOLDER') . '/addToCart', array('controller' => 'ProductController', 'method' => 'addToCart'), array()));
