@@ -98,7 +98,7 @@
         }
 
         .carousel-caption d-none d-md-block {
-             rgba(0,0,0,0.4)
+             background-color:rgba(0,0,0,0.4);
         }
 
     </style>
