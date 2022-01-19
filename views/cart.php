@@ -64,7 +64,7 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
                 echo "
                 <tr>
                     <td colspan='3' align='right'>Totaal</td>
-                    <th align='right'>$ " . number_format($total, 2) . "</th>
+                    <th align='right'>€ " . number_format($total, 2) . "</th>
                     <td></td>
                 </tr>";
                     }; ?>
