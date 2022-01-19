@@ -101,6 +101,10 @@
              background-color:rgba(0,0,0,0.4);
         }
 
+        #carouseldesc {
+            color: white;
+        }
+
     </style>
 
     <title><?php echo $title; ?></title>
