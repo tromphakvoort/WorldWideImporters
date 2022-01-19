@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.1...v2.0.2) (2022-01-19)
+
+
+### Features
+
+* Add € to shopping cart in stead of $ ([d041ab5](https://github.com/tromphakvoort/WorldWideImporters/commit/d041ab5adf11dcf3641b6017db223944a446f3ef))
+* Add Afreken button to shopping cart with dummy page ([4f2d0bf](https://github.com/tromphakvoort/WorldWideImporters/commit/4f2d0bfda881eb33c2fb2f06166fb7ca174c0801))
+* Add removal of product from shopping cart ([2180203](https://github.com/tromphakvoort/WorldWideImporters/commit/218020386eb79dca0555a261ccfb7710f827fb9a))
+
 ### [2.0.1](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.0...v2.0.1) (2022-01-19)
 
 
