@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.3...v2.0.4) (2022-01-19)
+
+
+### Features
+
+* Made carousel dark and added product title and description ([4b33e02](https://github.com/tromphakvoort/WorldWideImporters/commit/4b33e022ef8deab4b9e7db982824f691579e113c))
+
+
+### Bug Fixes
+
+* Made footer a little bit smaller ([9038f23](https://github.com/tromphakvoort/WorldWideImporters/commit/9038f2359730c63bd4d71b8d3279092283e279de))
+* Made footer a little bit smaller ([4a92ae6](https://github.com/tromphakvoort/WorldWideImporters/commit/4a92ae689b9f15d0dc0aaa10abd676fe66ef9309))
+
 ### [2.0.3](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.2...v2.0.3) (2022-01-19)
 
 
