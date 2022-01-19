@@ -1,5 +1,4 @@
 <?php $title = "Homepage | World Wide Importers";
-// require_once("CSS/Style.css");
 include("../templates/header.php");
 
 
@@ -41,6 +40,17 @@ include("../templates/header.php");
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-
+        </div>
+        <div class="categories wijStaan row">
+            <div class="col-md-12 title-featured">
+                <h3>WIJ STAAN VOOR...</h3>
+            </div>
+            <div class="col-xs-12">
+                <div class="iconicon1"><img src="https://cdn.webshopapp.com/shops/78708/themes/72270/assets/icon3circle.png?20211221092116" alt=""><span class="htitle">FAIR TRADE</span></div>
+                <div class="iconicon1"><img src="https://cdn.webshopapp.com/shops/78708/themes/72270/assets/icon3circle.png?20211221092116" alt=""><span class="htitle">VERSHEID</span></div>
+                <div class="iconicon1"><img src="https://cdn.webshopapp.com/shops/78708/themes/72270/assets/icon3circle.png?20211221092116" alt=""><span class="htitle">MAATWERK</span></div>
+                <div class="iconicon1"><img src="https://cdn.webshopapp.com/shops/78708/themes/72270/assets/icon3circle.png?20211221092116" alt=""><span class="htitle">EXTRA PUUR</span></div>
+                <div class="iconicon1"><img src="https://cdn.webshopapp.com/shops/78708/themes/72270/assets/icon3circle.png?20211221092116" alt=""><span class="htitle">KWALITEIT</span></div>
+            </div>
         </div>
         <?php include("../templates/footer.php"); ?>
