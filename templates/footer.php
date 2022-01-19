@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<footer class="bg-dark text-center text-white fixed-bottom">
+<footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
         <!-- Section: Social media -->
@@ -36,7 +36,7 @@
                 ></a>
         </section>
         <!-- Section: Social media -->
-        
+
         <!-- Section: Text -->
         <section class="mb-4">
             <p>
