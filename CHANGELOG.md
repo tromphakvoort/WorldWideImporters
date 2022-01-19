@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.0...v2.0.1) (2022-01-19)
+
+
+### Features
+
+* Add login and register button with conditional ([d8eb698](https://github.com/tromphakvoort/WorldWideImporters/commit/d8eb698fb4b86180ec296e3e6ff3d10d3c602bde))
+* Add logout button and methods ([293fa4a](https://github.com/tromphakvoort/WorldWideImporters/commit/293fa4ae773deb6acaa8b1d0bbf5297b55cf31c2))
+
+
+### Bug Fixes
+
+* make image path relative ([b86755e](https://github.com/tromphakvoort/WorldWideImporters/commit/b86755e1cd9ba54e9d7727ef0956ca88f1025b45))
+
 ## [2.0.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.1.1...v2.0.0) (2022-01-10)
 
 
