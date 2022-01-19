@@ -96,6 +96,11 @@
             color: #3c2314;
             line-height: 32px;
         }
+
+        .carousel-caption d-none d-md-block {
+             rgba(0,0,0,0.4)
+        }
+
     </style>
 
     <title><?php echo $title; ?></title>
