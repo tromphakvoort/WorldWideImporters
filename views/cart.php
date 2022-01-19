@@ -31,8 +31,7 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
 
 
 ?>
-    <div class="container" style="width: 65%">
-        <div style="clear: both"></div>
+    <div class="container">
         <h3 class="title2">Winkelwagen</h3>
         <div class="table-responsive">
             <table class="table table-bordered">
@@ -75,6 +74,7 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
                     }; ?>
             </table>
         </div>
+        <a href="/placeOrder" class="btn btn-warning btn-lg">Afrekenen</a>
     </div>
 
 

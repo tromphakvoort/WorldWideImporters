@@ -43,6 +43,9 @@ $httpCollection->add('product', new Route(constant('URL_SUBFOLDER') . '/product/
 $httpCollection->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'index'), array()));
 $httpCollection->add('register', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'index'), array()));
 
+// Place order page
+$httpCollection->add('placeOrder', new Route(constant('URL_SUBFOLDER') . '/placeOrder', array('controller' => 'StaticPageController', 'method' => 'placeOrderPage'), array()));
+
 // Set all routes to GET method
 $httpCollection->setMethods(array('GET'));
 
