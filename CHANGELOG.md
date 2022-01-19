@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.3...v2.0.4) (2022-01-19)
+
+
+### Features
+
+* Made carousel dark and added product title and description ([4b33e02](https://github.com/tromphakvoort/WorldWideImporters/commit/4b33e022ef8deab4b9e7db982824f691579e113c))
+
+
+### Bug Fixes
+
+* Made footer a little bit smaller ([9038f23](https://github.com/tromphakvoort/WorldWideImporters/commit/9038f2359730c63bd4d71b8d3279092283e279de))
+* Made footer a little bit smaller ([4a92ae6](https://github.com/tromphakvoort/WorldWideImporters/commit/4a92ae689b9f15d0dc0aaa10abd676fe66ef9309))
+
+### [2.0.3](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.2...v2.0.3) (2022-01-19)
+
+
+### Features
+
+* Update footer to be more pretty ([704fd1f](https://github.com/tromphakvoort/WorldWideImporters/commit/704fd1f03deee5499fa80c24c42558cfeea224b1))
+
+### [2.0.2](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.1...v2.0.2) (2022-01-19)
+
+
+### Features
+
+* Add € to shopping cart in stead of $ ([d041ab5](https://github.com/tromphakvoort/WorldWideImporters/commit/d041ab5adf11dcf3641b6017db223944a446f3ef))
+* Add Afreken button to shopping cart with dummy page ([4f2d0bf](https://github.com/tromphakvoort/WorldWideImporters/commit/4f2d0bfda881eb33c2fb2f06166fb7ca174c0801))
+* Add removal of product from shopping cart ([2180203](https://github.com/tromphakvoort/WorldWideImporters/commit/218020386eb79dca0555a261ccfb7710f827fb9a))
+
+### [2.0.1](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.0...v2.0.1) (2022-01-19)
+
+
+### Features
+
+* Add login and register button with conditional ([d8eb698](https://github.com/tromphakvoort/WorldWideImporters/commit/d8eb698fb4b86180ec296e3e6ff3d10d3c602bde))
+* Add logout button and methods ([293fa4a](https://github.com/tromphakvoort/WorldWideImporters/commit/293fa4ae773deb6acaa8b1d0bbf5297b55cf31c2))
+
+
+### Bug Fixes
+
+* make image path relative ([b86755e](https://github.com/tromphakvoort/WorldWideImporters/commit/b86755e1cd9ba54e9d7727ef0956ca88f1025b45))
+
 ## [2.0.0](https://github.com/tromphakvoort/WorldWideImporters/compare/v1.1.1...v2.0.0) (2022-01-10)
 
 

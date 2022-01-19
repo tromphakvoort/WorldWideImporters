@@ -43,6 +43,9 @@ $httpCollection->add('product', new Route(constant('URL_SUBFOLDER') . '/product/
 $httpCollection->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'index'), array()));
 $httpCollection->add('register', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'index'), array()));
 
+// Place order page
+$httpCollection->add('placeOrder', new Route(constant('URL_SUBFOLDER') . '/placeOrder', array('controller' => 'StaticPageController', 'method' => 'placeOrderPage'), array()));
+
 // Set all routes to GET method
 $httpCollection->setMethods(array('GET'));
 
@@ -52,9 +55,12 @@ $postCollection = new RouteCollection();
 // AUTHENTICATION ROUTES
 $postCollection->add('registerPOST', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'Authentication\RegisterController', 'method' => 'register'), array()));
 $postCollection->add('loginPOST', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'Authentication\LoginController', 'method' => 'authenticate'), array()));
+$postCollection->add('logout', new Route(constant('URL_SUBFOLDER') . '/logout', array('controller' => 'Authentication\LoginController', 'method' => 'logout'), array()));
 
-// Add to cart route
+// SHOPPINGCART ROUTES
 $postCollection->add('addToCart', new Route(constant('URL_SUBFOLDER') . '/addToCart', array('controller' => 'ProductController', 'method' => 'addToCart'), array()));
+$postCollection->add('removeFromCart', new Route(constant('URL_SUBFOLDER') . '/removeFromCart', array('controller' => 'ShoppingCartController', 'method' => 'removeFromShoppingCart'), array()));
+
 // set all routes to POST method
 $postCollection->setMethods(array('POST'));
 
