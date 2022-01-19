@@ -10,32 +10,32 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 
-        *{
+        * {
             font-family: 'Titillium Web', sans-serif;
         }
-        .product{
+        .product {
             border: 1px solid #e2e2e2;
             margin: -1px 19px 3px -1px;
             padding: 10px;
             text-align: center;
             background-color: #efefed;
         }
-        table, th, tr{
+        table, th, tr {
             text-align: center;
         }
-        .title2{
-            text-align: center;
-            color: cornflowerblue;
-            background-color: #e2e2e2;
-            padding: 2%;
-        }
-        h2{
+        .title2 {
             text-align: center;
             color: cornflowerblue;
             background-color: #e2e2e2;
             padding: 2%;
         }
-        table th{
+        h2 {
+            text-align: center;
+            color: cornflowerblue;
+            background-color: #e2e2e2;
+            padding: 2%;
+        }
+        table th {
             background-color: #e2e2e2;
 
         }

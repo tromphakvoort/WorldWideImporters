@@ -52,11 +52,16 @@ $results = mysqli_query($connection, "SELECT * FROM products ORDER BY id ASC");
                     foreach ($_SESSION["cart"] as $product) {
                         echo "
                 <tr>
-                    <td>" . $product->getProductName    () . "</td>
+                    <td>" . $product->getProductName() . "</td>
                     <td>1</td>
                     <td>€ " . round($product->getPriceAmount() / 100, $product->getPricePrecision()) . "</td>
                     <td>€ " . round($product->getPriceAmount() / 100, $product->getPricePrecision()) * 1 . "</td>
-                    <td></td>
+                    <td>
+                        <form action='/removeFromCart' method='post'>
+                            <input type='hidden' name='product-id' value='" . $product->getId() . "' />
+                            <button class='btn btn-danger' type='submit'>Verwijderen</button>
+                        </form>
+                    </td>
                 </tr> ";
 
                     $total = $total + (round($product->getPriceAmount() / 100, $product->getPricePrecision()) * 1   );
