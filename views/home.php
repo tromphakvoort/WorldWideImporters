@@ -5,7 +5,7 @@ include("../templates/header.php");
 ?>
 <div class="container">
     <section>
-        <h1>Homepage</h1>
+        <h1>Welkom bij World Wide Importers!</h1>
         <!--        Image carousel-->
         <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
