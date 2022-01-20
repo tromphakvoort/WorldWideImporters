@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.5](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.4...v2.0.5) (2022-01-20)
+
+
+### Features
+
+* Add search capebilities ([c2dc6b1](https://github.com/tromphakvoort/WorldWideImporters/commit/c2dc6b1d0168dcf16011f9cc4e5fb6c7ce2a42c7))
+
+
+### Bug Fixes
+
+* Made white chocolate images 16:9 ([2ae1b28](https://github.com/tromphakvoort/WorldWideImporters/commit/2ae1b2809cc99c94a2141611197b0cdac0fb802b))
+
 ### [2.0.4](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.3...v2.0.4) (2022-01-19)
 
 
