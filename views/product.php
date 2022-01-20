@@ -4,12 +4,16 @@ include("../templates/header.php"); ?>
 <div class="container">
     <section>
         <h1><?php echo $product->getProductName() ?></h1>
+        <?php foreach ($product->getProductImages($product->getId()) as $image) {
+            echo '<img class="img-fluid rounded" src="/' . $image . '" alt="' . $product->getProductName() . '">';
+        }
+        ?>
         <ul>
             <li>Beschrijving: <?php echo $product->getDescription(); ?></li>
             <li>Prijs: €<?php $price=round($product->getPriceAmount() / 100, $product->getPricePrecision()); print($price); ?></li>
             <li>Voorraad: <?php echo $product->getStock(); ?></li>
         </ul>
-        <form action="/addToCart" method="post">
+        <form action="/addToCart" method="post" class="mb-3">
             <input type="number" hidden name="product-id" value="<?php echo $product->getId(); ?>" />
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Aan winkelwagen toevoegen
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
@@ -17,9 +21,6 @@ include("../templates/header.php"); ?>
                 </svg>
             </button>
         </form>
-
-        <br>
-        <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     </section>
 </div>
 <?php include("../templates/footer.php"); ?>

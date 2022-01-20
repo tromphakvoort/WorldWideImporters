@@ -103,6 +103,31 @@ class Product
         }
     }
 
+    public function getProductImages(int $productId): array {
+        // Database connection
+        $connection = Database::getConnection();
+
+        // Initialize empty array
+        $productImages = array();
+
+        // Query images by product id
+        $result = mysqli_query($connection, "SELECT id, file_location, filename, mimetype FROM webshop_wwi.attachments WHERE webshop_wwi.attachments.fk_att_product_id = $productId");
+
+        if(mysqli_num_rows($result) > 0 ) {
+            $productImages = Utils::resultToArray($result);
+
+            $newProductImages = array();
+            foreach ($productImages as $productImage) {
+                $imageUrl = $productImage["file_location"] . $productImage["filename"] . $productImage["mimetype"];
+                array_push($newProductImages, $imageUrl);
+            }
+
+            $productImages = $newProductImages;
+        }
+
+        return $productImages;
+    }
+
     /**
      * @return mixed
      */
