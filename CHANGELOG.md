@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.7](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.6...v2.0.7) (2022-01-20)
+
+
+### Features
+
+* Add getImage method to product model ([4771fe3](https://github.com/tromphakvoort/WorldWideImporters/commit/4771fe35a1ec6f11698b30f997386a4c500ac784))
+
+
+### Bug Fixes
+
+* Reformat code on contact page and added missing closing div 🚀 ([c0e3d00](https://github.com/tromphakvoort/WorldWideImporters/commit/c0e3d00890686805a5ada915be30a705eb652f3d))
+
 ### [2.0.6](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.5...v2.0.6) (2022-01-20)
 
 
