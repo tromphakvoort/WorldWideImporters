@@ -110,6 +110,11 @@
             font-weight: bold;
         }
 
+        .productprijs{
+            color: red;
+            font-weight: 700;
+        }
+
     </style>
 
     <title><?php echo $title; ?></title>

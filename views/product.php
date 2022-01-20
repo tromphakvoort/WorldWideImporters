@@ -8,11 +8,13 @@ include("../templates/header.php"); ?>
             echo '<img class="img-fluid rounded" src="/' . $image . '" alt="' . $product->getProductName() . '">';
         }
         ?>
-        <ul>
-            <li>Beschrijving: <?php echo $product->getDescription(); ?></li>
-            <li>Prijs: €<?php $price=round($product->getPriceAmount() / 100, $product->getPricePrecision()); print($price); ?></li>
-            <li>Voorraad: <?php echo $product->getStock(); ?></li>
-        </ul>
+        <h4> Productomschrijving:</h4>
+            <div><?php echo $product->getDescription(); ?></div>
+        <span class="productprijs"> Prijs: €<?php $price=round($product->getPriceAmount() / 100, $product->getPricePrecision()); print($price); ?></span>
+        <br>
+        <br>
+        <span>Voorraad: <?php echo $product->getStock(); ?></span>
+        <br>
         <form action="/addToCart" method="post" class="mb-3">
             <input type="number" hidden name="product-id" value="<?php echo $product->getId(); ?>" />
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Aan winkelwagen toevoegen
