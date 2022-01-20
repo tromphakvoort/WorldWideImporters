@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.6](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.5...v2.0.6) (2022-01-20)
+
+
+### Bug Fixes
+
+* Add footer. Forgot 🙃 ([96b1471](https://github.com/tromphakvoort/WorldWideImporters/commit/96b147178e4d1fb716e7b4b15a7b697dbdddf62f))
+
 ### [2.0.5](https://github.com/tromphakvoort/WorldWideImporters/compare/v2.0.4...v2.0.5) (2022-01-20)
 
 
