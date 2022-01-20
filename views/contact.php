@@ -12,10 +12,12 @@ include("../templates/header.php"); ?>
         </div>
         <div class="form-row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Voornaam:">
+                <label for="voornaaminput">Voornaam:</label>
+                <input type="text" class="form-control" id="voornaaminput" placeholder="Voornaam:">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Achternaam:">
+                <label for="achternaaminput">Achternaam:</label>
+                <input type="text" class="form-control" id="achternaaminput" placeholder="Achternaam:">
             </div>
         </div>
         <div class="form-group">
