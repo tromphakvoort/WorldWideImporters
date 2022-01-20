@@ -28,7 +28,7 @@ include("../templates/header.php");
                     echo '<div class="carousel-item ' . $extraClasses . '">
                     <img src="../' . $product["file_location"] . $product["filename"] . $product["mimetype"] . '" class="d-block w-100 h-auto" alt="' . $product["product_name"] . '">
                     <div class="carousel-caption  d-md-block">
-                        <h5 id="carouseldesc">' . $product["product_name"] . '</h5>
+                        <h5 id="carouselheaderdesc">' . $product["product_name"] . '</h5>
                         <p id="carouseldesc">' . $product["description"] . '</p>
                      </div>
                     </div>';

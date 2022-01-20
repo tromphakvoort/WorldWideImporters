@@ -105,6 +105,11 @@
             color: white;
         }
 
+        #carouselheaderdesc {
+            color: white;
+            font-weight: bold;
+        }
+
     </style>
 
     <title><?php echo $title; ?></title>
