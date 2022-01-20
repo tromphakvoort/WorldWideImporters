@@ -23,5 +23,6 @@ include("../templates/header.php"); ?>
             <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
         </div>
     </form>
+    <button type="button" class="btn btn-primary">Verstuur</button>
 </div>
         <?php include("../templates/footer.php"); ?>
