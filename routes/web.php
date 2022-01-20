@@ -61,6 +61,9 @@ $postCollection->add('logout', new Route(constant('URL_SUBFOLDER') . '/logout', 
 $postCollection->add('addToCart', new Route(constant('URL_SUBFOLDER') . '/addToCart', array('controller' => 'ProductController', 'method' => 'addToCart'), array()));
 $postCollection->add('removeFromCart', new Route(constant('URL_SUBFOLDER') . '/removeFromCart', array('controller' => 'ShoppingCartController', 'method' => 'removeFromShoppingCart'), array()));
 
+// Search results
+$postCollection->add('searchResults', new Route(constant('URL_SUBFOLDER') . '/searchResults', array('controller' => 'SearchController', 'method' => 'index'), array()));
+
 // set all routes to POST method
 $postCollection->setMethods(array('POST'));
 

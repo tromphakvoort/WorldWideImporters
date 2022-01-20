@@ -39,8 +39,8 @@ use App\Helpers\Utils;
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li>
-                    <form class="d-flex">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Zoeken..." aria-label="Search"/>
+                    <form method="post" action="/searchResults" class="d-flex">
+                        <input class="form-control mr-sm-2" type="text" name="searchQuery" placeholder="Zoeken..." aria-label="Search"/>
                         <button class="btn btn-link my-2 my-sm-0" type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
                                  class="bi bi-search" viewBox="0 0 16 16">
